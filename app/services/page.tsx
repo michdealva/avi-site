@@ -1,3 +1,14 @@
+import {
+  Wrench,
+  Crosshair,
+  Zap,
+  Settings,
+  Calendar,
+  Search,
+  Package,
+  Shield,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
 import {
@@ -5,6 +16,17 @@ import {
   BRANDS,
   COMMON_ISSUES,
 } from "@/data/content";
+
+const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
+  wrench: Wrench,
+  crosshair: Crosshair,
+  zap: Zap,
+  cog: Settings,
+  calendar: Calendar,
+  search: Search,
+  package: Package,
+  shield: Shield,
+};
 
 export default function ServicesPage() {
   return (
@@ -36,7 +58,14 @@ export default function ServicesPage() {
         >
           <div className="mx-auto max-w-5xl px-6">
             <ScrollReveal>
-              <div className="mb-4 h-10 w-10 rounded-full bg-signal/10" />
+              {(() => {
+                const Icon = SERVICE_ICON_MAP[service.icon];
+                return (
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                    {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
+                  </div>
+                );
+              })()}
               <h2 className="text-2xl font-bold text-machine-black md:text-3xl">
                 {service.title}
               </h2>

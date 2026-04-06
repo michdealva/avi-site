@@ -2,6 +2,20 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  Wrench,
+  Crosshair,
+  Zap,
+  Settings,
+  Calendar,
+  Search,
+  Package,
+  Shield,
+  Clock,
+  ShieldCheck,
+  MessageSquare,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
 import {
@@ -12,6 +26,24 @@ import {
   INDUSTRIES,
   DIFFERENTIATORS,
 } from "@/data/content";
+
+const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
+  wrench: Wrench,
+  crosshair: Crosshair,
+  zap: Zap,
+  cog: Settings,
+  calendar: Calendar,
+  search: Search,
+  package: Package,
+  shield: Shield,
+};
+
+const DIFF_ICON_MAP: Record<string, LucideIcon> = {
+  "20 Years": Clock,
+  Independent: ShieldCheck,
+  "Same-Day": Zap,
+  Honest: MessageSquare,
+};
 
 export default function Home() {
   return (
@@ -110,7 +142,14 @@ export default function Home() {
                   href={`/services#${service.id}`}
                   className="group block rounded-lg border border-border-light bg-white p-8 transition-colors hover:border-signal"
                 >
-                  <div className="mb-4 h-10 w-10 rounded-full bg-signal/10" />
+                  {(() => {
+                    const Icon = SERVICE_ICON_MAP[service.icon];
+                    return (
+                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                        {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
+                      </div>
+                    );
+                  })()}
                   <h3 className="text-lg font-semibold text-machine-black">
                     {service.title}
                   </h3>
@@ -179,6 +218,14 @@ export default function Home() {
             {DIFFERENTIATORS.map((d, i) => (
               <ScrollReveal key={d.title} delay={i * 80}>
                 <div>
+                  {(() => {
+                    const DIcon = DIFF_ICON_MAP[d.title];
+                    return DIcon ? (
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                        <DIcon className="h-5 w-5 text-signal" strokeWidth={2} />
+                      </div>
+                    ) : null;
+                  })()}
                   <p className="text-2xl font-bold text-signal">{d.title}</p>
                   <p className="mt-1 text-xs uppercase tracking-wide text-dust">
                     {d.subtitle}

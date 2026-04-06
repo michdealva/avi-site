@@ -1,5 +1,14 @@
+import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
+
+const PHILOSOPHY_ICON_MAP: Record<string, LucideIcon> = {
+  Honesty: Eye,
+  "Clear Communication": MessageCircle,
+  "Fair Pricing": DollarSign,
+  "Rapid Response": Zap,
+};
 
 export default function AboutPage() {
   return (
@@ -90,6 +99,14 @@ export default function AboutPage() {
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 80}>
                 <div className="rounded-lg border border-border-light bg-white p-8">
+                  {(() => {
+                    const Icon = PHILOSOPHY_ICON_MAP[item.title];
+                    return Icon ? (
+                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                        <Icon className="h-5 w-5 text-signal" strokeWidth={2} />
+                      </div>
+                    ) : null;
+                  })()}
                   <h3 className="text-lg font-semibold text-machine-black">
                     {item.title}
                   </h3>

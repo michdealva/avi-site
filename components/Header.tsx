@@ -40,8 +40,16 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/" className="font-mono text-xl font-bold text-signal">
-          AVI
+        <Link href="/" className="flex items-center">
+          <img
+            src="/avi-logo.svg"
+            alt="AVI Industriel"
+            className="h-8 w-auto"
+            style={{
+              filter:
+                "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
+            }}
+          />
         </Link>
 
         {/* Desktop Nav */}

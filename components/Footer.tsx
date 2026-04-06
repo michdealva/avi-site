@@ -15,9 +15,15 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <p className="font-mono text-lg font-bold text-signal">
-              AVI INDUSTRIEL INC.
-            </p>
+            <img
+              src="/avi-logo.svg"
+              alt="AVI Industriel"
+              className="h-8 w-auto"
+              style={{
+                filter:
+                  "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
+              }}
+            />
             <p className="mt-4 max-w-xs font-heading text-sm leading-relaxed text-dust">
               Independent CNC diagnostics and repair. 20 years of experience
               across 9 major brands.
