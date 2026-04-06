@@ -49,12 +49,30 @@ export default function Home() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-screen items-center bg-graphite grid-texture pt-16">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+      <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16">
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
+          {/* AVI Logo as visual anchor */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="mx-auto mb-10"
+          >
+            <img
+              src="/avi-logo.svg"
+              alt=""
+              className="mx-auto h-20 md:h-28 w-auto"
+              style={{
+                filter:
+                  "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
+              }}
+            />
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="text-5xl font-extrabold leading-[1.05] tracking-tight text-bright md:text-7xl"
           >
             Your CNC is down.
@@ -67,10 +85,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              delay: 0.15,
+              delay: 0.25,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-6 max-w-xl text-xl text-steel-light"
+            className="mx-auto mt-6 max-w-xl text-xl text-steel-light"
           >
             Independent electromechanical diagnostics and repair. 20&nbsp;years.
             9&nbsp;brands. Montreal.
@@ -81,10 +99,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              delay: 0.3,
+              delay: 0.4,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <a
               href={PHONE_LINK}
@@ -98,6 +116,29 @@ export default function Home() {
             >
               Request a Quote
             </Link>
+          </motion.div>
+
+          {/* Stat counters */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-16 flex items-center justify-center gap-8 sm:gap-16"
+          >
+            {[
+              { value: "20+", label: "Years" },
+              { value: "9", label: "Brands" },
+              { value: "5", label: "Industries" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="font-mono text-3xl font-bold text-signal md:text-4xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.1em] text-steel-light">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
