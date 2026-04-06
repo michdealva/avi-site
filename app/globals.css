@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-workshop: #F7F7F5;
+  --color-concrete: #EDEDEB;
+  --color-graphite: #1A1D23;
+  --color-steel: #252830;
+  --color-machine-black: #1A1D23;
+  --color-shop-grey: #5A5D66;
+  --color-dust: #8A8D94;
+  --color-bright: #F7F7F5;
+  --color-steel-light: #9A9DA6;
+  --color-signal: #2ECC52;
+  --color-signal-dark: #25A844;
+  --color-signal-subtle: rgba(46, 204, 82, 0.1);
+  --color-border-light: #E0E0DC;
+  --color-border-dark: #2F333B;
+  --color-danger: #E53E3E;
+  --color-urgent: #F59E0B;
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #F7F7F5;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #F7F7F5;
+  color: #1A1D23;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(46, 204, 82, 0.2);
+  color: #1A1D23;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F7F7F5; }
+::-webkit-scrollbar-thumb { background: #E0E0DC; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8A8D94; }
+
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
