@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Blueprint from "@/components/illustrations/Blueprint";
+import CNCMachine from "@/components/illustrations/CNCMachine";
+import GearSystem from "@/components/illustrations/GearSystem";
 import {
   Wrench,
   Crosshair,
@@ -49,8 +52,11 @@ export default function Home() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
+      <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
+        {/* Blueprint background */}
+        <Blueprint className="absolute inset-0 w-full h-full opacity-40 pointer-events-none" />
+
+        <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
           {/* AVI Logo as visual anchor */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -169,8 +175,11 @@ export default function Home() {
       </section>
 
       {/* ── Services Snapshot ── */}
-      <section className="bg-workshop py-24">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="relative bg-workshop py-24 overflow-hidden">
+        {/* CNC Machine illustration - decorative */}
+        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.06] pointer-events-none" />
+
+        <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.1em] text-dust">
               Services
@@ -248,8 +257,9 @@ export default function Home() {
       </section>
 
       {/* ── Why AVI ── */}
-      <section className="bg-workshop py-24">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="relative bg-workshop py-24 overflow-hidden">
+        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.05] pointer-events-none" />
+        <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.1em] text-dust">
               Why AVI

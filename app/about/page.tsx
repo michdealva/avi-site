@@ -2,6 +2,7 @@ import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
+import GearSystem from "@/components/illustrations/GearSystem";
 
 const PHILOSOPHY_ICON_MAP: Record<string, LucideIcon> = {
   Honesty: Eye,
@@ -29,8 +30,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Alexandre's Story ── */}
-      <section className="bg-workshop py-24">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="relative bg-workshop py-24 overflow-hidden">
+        <GearSystem className="absolute -right-10 top-10 w-[300px] opacity-[0.05] pointer-events-none" />
+        <div className="relative mx-auto max-w-4xl px-6">
           <ScrollReveal>
             <blockquote className="border-l-4 border-signal pl-6 md:pl-8">
               <p className="text-xl leading-relaxed text-machine-black md:text-2xl">
