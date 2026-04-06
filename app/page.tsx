@@ -144,20 +144,24 @@ export default function Home() {
       </section>
 
       {/* ── Trust Bar ── */}
-      <section className="bg-concrete py-8">
+      <section className="bg-concrete py-10">
         <div className="mx-auto max-w-6xl px-6">
           <ScrollReveal>
-            <p className="mb-4 text-center text-xs uppercase tracking-[0.1em] text-dust">
+            <p className="mb-6 text-center text-xs uppercase tracking-[0.1em] text-dust">
               Experienced with
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+            <div className="grid grid-cols-3 items-center justify-items-center gap-6 md:grid-cols-5 lg:flex lg:flex-wrap lg:justify-center lg:gap-10">
               {BRANDS.map((brand) => (
-                <span
-                  key={brand}
-                  className="font-mono text-sm text-shop-grey md:text-base"
+                <div
+                  key={brand.name}
+                  className="flex h-12 items-center justify-center grayscale opacity-60 transition-all hover:grayscale-0 hover:opacity-100"
                 >
-                  {brand}
-                </span>
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-8 max-w-[100px] object-contain md:h-10 md:max-w-[120px]"
+                  />
+                </div>
               ))}
             </div>
           </ScrollReveal>

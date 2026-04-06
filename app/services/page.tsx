@@ -93,10 +93,10 @@ export default function ServicesPage() {
                 <div className="mt-2 flex flex-wrap gap-2">
                   {BRANDS.map((brand) => (
                     <span
-                      key={brand}
+                      key={brand.name}
                       className="rounded bg-concrete px-3 py-1 font-mono text-xs text-shop-grey"
                     >
-                      {brand}
+                      {brand.name}
                     </span>
                   ))}
                 </div>
@@ -154,10 +154,15 @@ export default function ServicesPage() {
 
           <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3">
             {BRANDS.map((brand, i) => (
-              <ScrollReveal key={brand} delay={i * 60}>
-                <div className="rounded-lg border border-border-light bg-white px-6 py-8 text-center">
-                  <span className="font-mono text-xl font-medium text-machine-black md:text-2xl">
-                    {brand}
+              <ScrollReveal key={brand.name} delay={i * 60}>
+                <div className="flex flex-col items-center justify-center rounded-lg border border-border-light bg-white px-6 py-8">
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-10 max-w-[140px] object-contain md:h-12"
+                  />
+                  <span className="mt-3 font-mono text-xs text-dust">
+                    {brand.name}
                   </span>
                 </div>
               </ScrollReveal>

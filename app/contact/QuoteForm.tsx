@@ -136,8 +136,8 @@ export default function QuoteForm() {
         >
           <option value="">Select a brand</option>
           {BRANDS.map((brand) => (
-            <option key={brand} value={brand}>
-              {brand}
+            <option key={brand.name} value={brand.name}>
+              {brand.name}
             </option>
           ))}
           <option value="Other">Other</option>

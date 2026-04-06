@@ -2,16 +2,21 @@ export const PHONE = "(514) 971-1284";
 export const PHONE_LINK = "tel:+15149711284";
 export const EMAIL = "avitechnoservices@gmail.com";
 
-export const BRANDS = [
-  "Makino",
-  "Mazak",
-  "Cincinnati",
-  "Matsuura",
-  "Haas",
-  "TOS",
-  "Emmegi",
-  "Fanuc",
-  "Siemens",
+export interface Brand {
+  name: string;
+  logo: string;
+}
+
+export const BRANDS: Brand[] = [
+  { name: "Makino", logo: "/brands/makino.png" },
+  { name: "Mazak", logo: "/brands/mazak.png" },
+  { name: "Cincinnati", logo: "/brands/cincinnati.png" },
+  { name: "Matsuura", logo: "/brands/matsuura.svg" },
+  { name: "Haas", logo: "/brands/haas.png" },
+  { name: "TOS", logo: "/brands/tos.png" },
+  { name: "Emmegi", logo: "/brands/emmegi.png" },
+  { name: "Fanuc", logo: "/brands/fanuc.png" },
+  { name: "Siemens", logo: "/brands/siemens.png" },
 ];
 
 export type Service = {
