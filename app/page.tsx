@@ -54,7 +54,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
         {/* Blueprint background */}
-        <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none" />
+        <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none pulse-subtle" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
           {/* AVI Logo as visual anchor */}
@@ -177,7 +177,7 @@ export default function Home() {
       {/* ── Services Snapshot ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
         {/* CNC Machine illustration - decorative */}
-        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.12] pointer-events-none" />
+        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.12] pointer-events-none float-slow" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
@@ -258,7 +258,7 @@ export default function Home() {
 
       {/* ── Why AVI ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.1] pointer-events-none" />
+        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.1] pointer-events-none float float-delay-1" />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.1em] text-dust">

@@ -35,7 +35,7 @@ export default function ServicesPage() {
     <main>
       {/* ── Page Header ── */}
       <section className="relative bg-graphite grid-texture py-24 md:py-32 overflow-hidden">
-        <CrosshairIllustration className="absolute right-10 top-1/2 -translate-y-1/2 w-[200px] md:w-[300px] opacity-30 pointer-events-none" />
+        <CrosshairIllustration className="absolute right-10 top-1/2 -translate-y-1/2 w-[200px] md:w-[300px] opacity-30 pointer-events-none float-slow" />
         <div className="relative mx-auto max-w-5xl px-6">
           <ScrollReveal>
             <h1 className="text-4xl font-extrabold tracking-tight text-bright md:text-6xl">
@@ -111,7 +111,7 @@ export default function ServicesPage() {
 
       {/* ── Common Issues ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <CircuitBoard className="absolute right-0 top-0 w-[400px] opacity-[0.4] pointer-events-none" />
+        <CircuitBoard className="absolute right-0 top-0 w-[400px] opacity-[0.4] pointer-events-none pulse-subtle float-delay-2" />
         <div className="relative mx-auto max-w-5xl px-6">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-machine-black md:text-4xl">

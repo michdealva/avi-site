@@ -74,7 +74,29 @@ body {
   transform: translateY(0);
 }
 
+/* Floating illustrations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-0.5deg); }
+}
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.float { animation: float 6s ease-in-out infinite; }
+.float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.float-delay-1 { animation-delay: -2s; }
+.float-delay-2 { animation-delay: -4s; }
+.pulse-subtle { animation: pulse-subtle 4s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
+  .float, .float-slow, .pulse-subtle {
+    animation: none !important;
+  }
   .reveal-up {
     opacity: 1 !important;
     transform: none !important;
