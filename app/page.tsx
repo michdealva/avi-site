@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 import Blueprint from "@/components/illustrations/Blueprint";
 import CNCMachine from "@/components/illustrations/CNCMachine";
 import GearSystem from "@/components/illustrations/GearSystem";
+import CrosshairIllustration from "@/components/illustrations/Crosshair";
 import {
   Wrench,
   Crosshair,
@@ -53,11 +55,10 @@ export default function Home() {
     <main>
       {/* ── Hero ── */}
       <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
-        {/* Blueprint background */}
         <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none pulse-subtle" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
-          {/* AVI Logo as visual anchor */}
+          {/* AVI Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -79,7 +80,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl font-extrabold leading-[1.05] tracking-tight text-bright md:text-7xl"
+            className="text-5xl font-extrabold leading-[1.05] tracking-[-0.03em] text-bright md:text-7xl"
           >
             Your CNC is down.
             <br />
@@ -89,11 +90,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="mx-auto mt-6 max-w-xl text-xl text-steel-light"
           >
             Independent electromechanical diagnostics and repair. 20&nbsp;years.
@@ -103,17 +100,14 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.4,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <a
               href={PHONE_LINK}
-              className="inline-flex items-center justify-center rounded-lg bg-signal px-8 py-4 font-semibold text-white transition-colors hover:bg-signal-dark"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-signal px-8 py-4 font-semibold text-white transition-colors hover:bg-signal-dark"
             >
+              <Phone className="h-4 w-4" />
               Call {PHONE}
             </a>
             <Link
@@ -146,37 +140,37 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
-        </div>
-      </section>
 
-      {/* ── Trust Bar ── */}
-      <section className="bg-concrete py-10">
-        <div className="mx-auto max-w-6xl px-6">
-          <ScrollReveal>
-            <p className="mb-6 text-center text-xs uppercase tracking-[0.1em] text-dust">
-              Experienced with
+          {/* Trust bar logos — INSIDE hero on dark bg (Remy push #1) */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-16 border-t border-white/10 pt-8"
+          >
+            <p className="mb-4 text-center text-[10px] uppercase tracking-[0.15em] text-steel-light/60">
+              Trusted across 9 major brands
             </p>
-            <div className="grid grid-cols-3 items-center justify-items-center gap-6 md:grid-cols-5 lg:flex lg:flex-wrap lg:justify-center lg:gap-10">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
               {BRANDS.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex h-12 items-center justify-center grayscale opacity-60 transition-all hover:grayscale-0 hover:opacity-100"
+                  className="flex h-10 items-center justify-center opacity-40 transition-opacity hover:opacity-80"
                 >
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-8 max-w-[100px] object-contain md:h-10 md:max-w-[120px]"
+                    className="h-6 max-w-[90px] object-contain invert md:h-8 md:max-w-[110px]"
                   />
                 </div>
               ))}
             </div>
-          </ScrollReveal>
+          </motion.div>
         </div>
       </section>
 
-      {/* ── Services Snapshot ── */}
+      {/* ── Services Snapshot ── (Remy push #3: green left border on cards) */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        {/* CNC Machine illustration - decorative */}
         <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.12] pointer-events-none float-slow" />
 
         <div className="relative mx-auto max-w-6xl px-6">
@@ -184,8 +178,8 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.1em] text-dust">
               Services
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-machine-black md:text-4xl">
-              What we do
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
+              Full-spectrum CNC service
             </h2>
           </ScrollReveal>
 
@@ -194,7 +188,7 @@ export default function Home() {
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link
                   href={`/services#${service.id}`}
-                  className="group block rounded-lg border border-border-light bg-white p-8 transition-colors hover:border-signal"
+                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 transition-all hover:shadow-lg hover:shadow-signal/5"
                 >
                   {(() => {
                     const Icon = SERVICE_ICON_MAP[service.icon];
@@ -217,18 +211,26 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={400}>
+            <div className="mt-8 text-center">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-sm font-medium text-signal hover:text-signal-dark transition-colors"
+              >
+                View all 8 services &rarr;
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* ── Industries ── */}
+      {/* ── Industries ── (Remy push #4: tighter heading) */}
       <section className="bg-concrete py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.1em] text-dust">
-              Industries
-            </p>
-            <h2 className="mt-2 text-3xl font-bold text-machine-black md:text-4xl">
-              Sectors we serve
+            <h2 className="text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
+              Trusted across critical sectors
             </h2>
           </ScrollReveal>
 
@@ -256,16 +258,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Why AVI ── */}
-      <section className="relative bg-workshop py-24 overflow-hidden">
-        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.1] pointer-events-none float float-delay-1" />
+      {/* ── Why AVI ── (Remy push #2: DARK section to break monotony) */}
+      <section className="relative bg-graphite grid-texture py-24 overflow-hidden">
+        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.15] pointer-events-none float float-delay-1" />
+        <CrosshairIllustration className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-20 pointer-events-none float-slow float-delay-2" />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.1em] text-dust">
+            <h2 className="text-3xl font-bold tracking-tight text-bright md:text-4xl">
               Why AVI
-            </p>
-            <h2 className="mt-2 text-3xl font-bold text-machine-black md:text-4xl">
-              Why manufacturers trust us
             </h2>
           </ScrollReveal>
 
@@ -282,10 +282,10 @@ export default function Home() {
                     ) : null;
                   })()}
                   <p className="text-2xl font-bold text-signal">{d.title}</p>
-                  <p className="mt-1 text-xs uppercase tracking-wide text-dust">
+                  <p className="mt-1 text-xs uppercase tracking-wide text-steel-light/60">
                     {d.subtitle}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-shop-grey">
+                  <p className="mt-3 text-sm leading-relaxed text-steel-light">
                     {d.description}
                   </p>
                 </div>
@@ -297,6 +297,15 @@ export default function Home() {
 
       {/* ── CTA ── */}
       <CTABand headline="Machine down? Let's fix it." />
+
+      {/* ── Floating phone CTA — mobile only (Remy push #5) ── */}
+      <a
+        href={PHONE_LINK}
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-signal shadow-lg shadow-signal/30 transition-transform hover:scale-110 md:hidden"
+        aria-label="Call AVI"
+      >
+        <Phone className="h-6 w-6 text-white" />
+      </a>
     </main>
   );
 }
