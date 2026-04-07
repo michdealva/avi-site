@@ -1,14 +1,28 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PHONE, PHONE_LINK, EMAIL } from "@/data/content";
 
-const NAV_LINKS = [
+const NAV_LINKS_EN = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
+const NAV_LINKS_FR = [
+  { label: "Accueil", href: "/fr" },
+  { label: "Services", href: "/fr/services" },
+  { label: "A propos", href: "/fr/about" },
+  { label: "Contact", href: "/fr/contact" },
+];
+
 export default function Footer() {
+  const pathname = usePathname();
+  const isFr = pathname.startsWith("/fr");
+  const navLinks = isFr ? NAV_LINKS_FR : NAV_LINKS_EN;
+
   return (
     <footer className="bg-graphite border-t border-border-dark">
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -25,11 +39,14 @@ export default function Footer() {
               }}
             />
             <p className="mt-4 max-w-xs font-heading text-sm leading-relaxed text-dust">
-              Independent CNC diagnostics and repair. 20 years of experience
-              across 9 major brands.
+              {isFr
+                ? "Diagnostic et reparation CNC independants. 20 ans d'experience sur 9 marques majeures."
+                : "Independent CNC diagnostics and repair. 20 years of experience across 9 major brands."}
             </p>
             <p className="mt-6 font-heading text-sm text-dust">
-              Based in Greater Montreal. Ready to travel.
+              {isFr
+                ? "Base dans le Grand Montreal. Pret a voyager."
+                : "Based in Greater Montreal. Ready to travel."}
             </p>
           </div>
 
@@ -39,7 +56,7 @@ export default function Footer() {
               Navigation
             </p>
             <nav className="mt-4 flex flex-col gap-3">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -76,7 +93,9 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 border-t border-border-dark pt-8">
           <p className="font-heading text-xs text-dust">
-            &copy; 2026 AVI Industriel Inc. All rights reserved.
+            {isFr
+              ? "\u00A9 2026 AVI Industriel Inc. Tous droits reserves."
+              : "\u00A9 2026 AVI Industriel Inc. All rights reserved."}
           </p>
         </div>
       </div>

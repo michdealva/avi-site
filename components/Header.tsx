@@ -2,18 +2,33 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PHONE, PHONE_LINK } from "@/data/content";
 
-const NAV_LINKS = [
+const NAV_LINKS_EN = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
+const NAV_LINKS_FR = [
+  { label: "Accueil", href: "/fr" },
+  { label: "Services", href: "/fr/services" },
+  { label: "A propos", href: "/fr/about" },
+  { label: "Contact", href: "/fr/contact" },
+];
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isFr = pathname.startsWith("/fr");
+  const navLinks = isFr ? NAV_LINKS_FR : NAV_LINKS_EN;
+
+  // Build language toggle hrefs
+  const enHref = isFr ? pathname.replace(/^\/fr/, "") || "/" : pathname;
+  const frHref = isFr ? pathname : `/fr${pathname === "/" ? "" : pathname}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -40,7 +55,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href={isFr ? "/fr" : "/"} className="flex items-center">
           <img
             src="/avi-logo.svg"
             alt="AVI Industriel"
@@ -54,7 +69,7 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -78,16 +93,26 @@ export default function Header() {
           <a
             href={PHONE_LINK}
             className="flex items-center text-white/80 transition-colors hover:text-signal md:hidden"
-            aria-label="Call AVI"
+            aria-label={isFr ? "Appeler AVI" : "Call AVI"}
           >
             <PhoneIcon />
           </a>
 
           {/* Language toggle */}
           <div className="hidden items-center gap-1 font-heading text-xs font-medium md:flex">
-            <span className="text-white">EN</span>
+            <Link
+              href={enHref}
+              className={isFr ? "text-white/40 hover:text-white/70 transition-colors" : "text-white font-bold"}
+            >
+              EN
+            </Link>
             <span className="text-white/30">|</span>
-            <span className="cursor-not-allowed text-white/30">FR</span>
+            <Link
+              href={frHref}
+              className={isFr ? "text-white font-bold" : "text-white/40 hover:text-white/70 transition-colors"}
+            >
+              FR
+            </Link>
           </div>
 
           {/* Hamburger */}
@@ -124,7 +149,7 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col items-center gap-8 pt-16">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -138,12 +163,24 @@ export default function Header() {
             href={PHONE_LINK}
             className="mt-4 inline-flex h-12 items-center justify-center rounded-lg bg-signal px-8 font-heading text-sm font-semibold text-white transition-colors hover:bg-signal-dark"
           >
-            Call {PHONE}
+            {isFr ? "Appeler" : "Call"} {PHONE}
           </a>
           <div className="flex items-center gap-2 font-heading text-sm font-medium">
-            <span className="text-white">EN</span>
+            <Link
+              href={enHref}
+              onClick={() => setMobileOpen(false)}
+              className={isFr ? "text-white/40" : "text-white font-bold"}
+            >
+              EN
+            </Link>
             <span className="text-white/30">|</span>
-            <span className="cursor-not-allowed text-white/30">FR</span>
+            <Link
+              href={frHref}
+              onClick={() => setMobileOpen(false)}
+              className={isFr ? "text-white font-bold" : "text-white/40"}
+            >
+              FR
+            </Link>
           </div>
         </nav>
       </div>
