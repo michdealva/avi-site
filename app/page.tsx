@@ -56,6 +56,12 @@ export default function Home() {
     <main>
       {/* ── Hero ── */}
       <section className="relative flex min-h-[85vh] items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
+        {/* Ambient moving glow */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="hero-glow-1 absolute w-[500px] h-[500px] rounded-full bg-signal/[0.03] blur-[120px]" />
+          <div className="hero-glow-2 absolute w-[400px] h-[400px] rounded-full bg-signal/[0.025] blur-[100px]" />
+        </div>
+
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-16 md:py-20 text-center">
           {/* AVI Logo with hover glow */}
           <motion.div

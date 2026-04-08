@@ -115,7 +115,7 @@ export default function ServiceCarousel({
             <Link
               key={service.id}
               href={`${linkPrefix}/services#${service.id}`}
-              className="group flex-shrink-0 w-[280px] md:w-[320px] rounded-lg border border-border-light bg-white p-6 hover:border-signal transition-colors duration-300"
+              className="group flex-shrink-0 w-[280px] md:w-[320px] rounded-lg border border-border-light bg-white p-6 hover:border-signal transition-all duration-300 hover:scale-110 hover:rotate-[-2deg] hover:z-10 origin-center"
             >
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
                 {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}

@@ -53,6 +53,24 @@ body {
   background-size: 40px 40px;
 }
 
+/* Hero ambient glow */
+@keyframes heroGlow1 {
+  0% { top: 20%; left: 10%; }
+  25% { top: 30%; left: 60%; }
+  50% { top: 50%; left: 40%; }
+  75% { top: 15%; left: 70%; }
+  100% { top: 20%; left: 10%; }
+}
+@keyframes heroGlow2 {
+  0% { top: 60%; right: 10%; }
+  25% { top: 40%; right: 50%; }
+  50% { top: 20%; right: 30%; }
+  75% { top: 55%; right: 60%; }
+  100% { top: 60%; right: 10%; }
+}
+.hero-glow-1 { animation: heroGlow1 20s ease-in-out infinite; }
+.hero-glow-2 { animation: heroGlow2 25s ease-in-out infinite; }
+
 /* Infinite marquee scroll */
 @keyframes marquee {
   0% { transform: translateX(0); }
