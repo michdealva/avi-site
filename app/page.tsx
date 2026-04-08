@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 // Iconscout illustrations used as <img> tags with CSS filters
+import ServiceCarousel from "@/components/ServiceCarousel";
 import {
   Wrench,
   Crosshair,
@@ -55,30 +56,30 @@ export default function Home() {
     <main>
       {/* ── Hero ── */}
       <section className="relative flex min-h-[85vh] items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
-        <img src="/icons/blueprint.svg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] pointer-events-none pulse-subtle" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
-
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(46,204,82,0.06)_0%,transparent_70%)] pointer-events-none" />
-
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-16 md:py-20 text-center">
-          {/* AVI Logo */}
+          {/* AVI Logo with hover glow */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto mb-10"
+            className="mx-auto mb-10 group/logo inline-block"
           >
-            <img
-              src="/avi-logo.svg"
-              alt="AVI Industriel"
-              className="mx-auto h-12 md:h-16 w-auto"
-              width={200}
-              height={100}
-              fetchPriority="high"
-              style={{
-                filter:
-                  "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
-              }}
-            />
+            <div className="relative">
+              {/* Glow layer behind logo */}
+              <div className="absolute inset-0 rounded-full blur-[40px] bg-signal/0 group-hover/logo:bg-signal/20 transition-all duration-700 scale-150" />
+              <img
+                src="/avi-logo.svg"
+                alt="AVI Industriel"
+                className="relative mx-auto h-12 md:h-16 w-auto transition-all duration-500 group-hover/logo:scale-105"
+                width={200}
+                height={100}
+                fetchPriority="high"
+                style={{
+                  filter:
+                    "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
+                }}
+              />
+            </div>
           </motion.div>
 
           <motion.h1
@@ -192,75 +193,18 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="mt-12 space-y-6">
-            {/* Featured first service */}
-            <ScrollReveal>
-              <Link
-                href={`/services#${SERVICES[0].id}`}
-                className="group block rounded-lg border border-border-light bg-white p-8 md:flex md:gap-8 md:items-start hover:border-signal transition-colors duration-300"
-              >
-                {(() => {
-                  const Icon = SERVICE_ICON_MAP[SERVICES[0].icon];
-                  return (
-                    <div className="mb-4 md:mb-0 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-signal/10">
-                      {Icon && <Icon className="h-6 w-6 text-signal" strokeWidth={2} />}
-                    </div>
-                  );
-                })()}
-                <div>
-                  <h3 className="text-xl font-bold text-machine-black">
-                    {SERVICES[0].title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-shop-grey">
-                    {SERVICES[0].description}
-                  </p>
-                  <span className="mt-4 inline-block text-sm font-medium text-signal transition-colors group-hover:text-signal-dark">
-                    Learn more &rarr;
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-            {/* Remaining 3 services */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {SERVICES.slice(1, 4).map((service, i) => (
-                <ScrollReveal key={service.id} delay={(i + 1) * 80}>
-                  <Link
-                    href={`/services#${service.id}`}
-                    className="group block rounded-lg border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
-                  >
-                    {(() => {
-                      const Icon = SERVICE_ICON_MAP[service.icon];
-                      return (
-                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
-                          {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
-                        </div>
-                      );
-                    })()}
-                    <h3 className="text-lg font-semibold text-machine-black">
-                      {service.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-shop-grey">
-                      {service.description}
-                    </p>
-                    <span className="mt-4 inline-block text-sm font-medium text-signal transition-colors group-hover:text-signal-dark">
-                      Learn more &rarr;
-                    </span>
-                  </Link>
-                </ScrollReveal>
-              ))}
-            </div>
+          <div className="mt-12">
+            <ServiceCarousel services={SERVICES} iconMap={SERVICE_ICON_MAP} />
           </div>
 
-          <ScrollReveal delay={400}>
-            <div className="mt-8 text-center">
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 text-sm font-medium text-signal hover:text-signal-dark transition-colors"
-              >
-                View all 8 services &rarr;
-              </Link>
-            </div>
-          </ScrollReveal>
+          <div className="mt-8 text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm font-medium text-signal hover:text-signal-dark transition-colors"
+            >
+              View all 8 services &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
