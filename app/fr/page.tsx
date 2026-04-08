@@ -160,7 +160,7 @@ export default function HomeFR() {
         <div className="relative">
           <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-signal to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-signal to-transparent" />
-          <div className="flex w-max animate-[marquee_25s_linear_infinite] items-center gap-16">
+          <div className="flex w-max animate-[marquee_45s_linear_infinite] items-center gap-20">
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <div
                 key={`${brand.name}-${i}`}
@@ -169,7 +169,7 @@ export default function HomeFR() {
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="h-5 max-w-[100px] object-contain md:h-6 md:max-w-[120px]"
+                  className="h-8 max-w-[130px] object-contain invert brightness-0 invert md:h-10 md:max-w-[150px]"
                   width={110}
                   height={24}
                   loading="lazy"
