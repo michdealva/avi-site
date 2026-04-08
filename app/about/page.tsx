@@ -50,7 +50,7 @@ export default function AboutPage() {
               <div className="h-14 w-14 rounded-full bg-signal/10" />
               <div>
                 <p className="font-semibold text-machine-black">
-                  Alexandre Bherer
+                  Alexandre Vachon
                 </p>
                 <p className="text-sm text-shop-grey">
                   Founder &amp; Lead Technician

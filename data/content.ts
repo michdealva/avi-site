@@ -17,6 +17,12 @@ export const BRANDS: Brand[] = [
   { name: "Emmegi", logo: "/brands/emmegi.png" },
   { name: "Fanuc", logo: "/brands/fanuc.png" },
   { name: "Siemens", logo: "/brands/siemens.png" },
+  { name: "Hurco", logo: "/brands/hurco.png" },
+  { name: "DMG Mori", logo: "/brands/dmg-mori.png" },
+  { name: "Okuma", logo: "/brands/okuma.png" },
+  { name: "Hankook", logo: "/brands/hankook.png" },
+  { name: "Doosan", logo: "/brands/doosan.png" },
+  { name: "Hardinge", logo: "/brands/hardinge.png" },
 ];
 
 export type Service = {

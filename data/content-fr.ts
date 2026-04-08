@@ -1,217 +1,216 @@
-import type { Service, Differentiator, Brand } from "./content";
+import type { Service, Differentiator } from "./content";
 
 export { PHONE, PHONE_LINK, EMAIL, BRANDS } from "./content";
 
 export const SERVICES_FR: Service[] = [
   {
     id: "diagnostics",
-    title: "Diagnostic et reparation",
+    title: "Diagnostic et réparation",
     description:
-      "Diagnostic rapide de pannes, resolution de codes d'alarme et reparation CNC. Nous identifions les causes profondes — pas seulement les symptomes.",
+      "Diagnostic rapide des pannes, résolution des codes d'alarme et réparation CNC. On trouve la vraie cause — pas juste le symptôme.",
     scenarios:
-      "Alarmes machine, erreurs d'axes, pannes inattendues, diagnostic post-collision",
+      "Alarmes machine, erreurs d'axe, pannes soudaines, diagnostic après collision",
     icon: "wrench",
   },
   {
     id: "geometry",
-    title: "Geometrie et alignement CNC",
+    title: "Géométrie et alignement CNC",
     description:
-      "Verification de geometrie de precision, alignement d'axes, test ballbar et compensation geometrique.",
+      "Vérification de géométrie de précision, alignement d'axes, test ballbar et compensation géométrique.",
     scenarios:
-      "Derive d'axe, problemes de tolerance recurrents, calibration annuelle, realignement post-collision",
+      "Dérive d'axe, problèmes de tolérance récurrents, calibration annuelle, réalignement après collision",
     icon: "crosshair",
   },
   {
     id: "electrical",
-    title: "Depannage electrique",
+    title: "Dépannage électrique",
     description:
-      "Pannes intermittentes, defaillances de variateurs, problemes de servo, diagnostic de commandes sur toutes les plateformes CNC majeures.",
+      "Pannes intermittentes, défaillances de drives, problèmes de servo, diagnostic de contrôleurs sur toutes les plateformes CNC.",
     scenarios:
-      "Arrets intermittents, alarmes de variateurs, pannes de broche, erreurs de communication",
+      "Arrêts intermittents, alarmes de drive, pannes de broche, erreurs de communication",
     icon: "zap",
   },
   {
     id: "mechanical",
-    title: "Mecanique, pneumatique et hydraulique",
+    title: "Mécanique, pneumatique et hydraulique",
     description:
-      "Service complet des systemes mecaniques — des vis a billes et roulements aux unites hydrauliques et actionneurs pneumatiques.",
+      "Service complet des systèmes mécaniques — vis à billes, roulements, unités hydrauliques et actionneurs pneumatiques.",
     scenarios:
-      "Fuites hydrauliques, perte de pression pneumatique, bruit de roulement, jeu de vis a billes",
+      "Fuites hydrauliques, perte de pression pneumatique, bruit de roulement, jeu dans les vis à billes",
     icon: "cog",
   },
   {
     id: "preventive",
-    title: "Maintenance preventive",
+    title: "Maintenance préventive",
     description:
-      "Programmes de maintenance planifiee qui previennent les pannes avant qu'elles n'arretent la production.",
+      "Programmes de maintenance planifiée pour prévenir les pannes avant qu'elles arrêtent votre production.",
     scenarios:
-      "Contrats de service annuels, inspections pre-arret, surveillance de l'usure",
+      "Contrats de service annuels, inspections pré-arrêt, suivi de l'usure",
     icon: "calendar",
   },
   {
     id: "inspection",
-    title: "Inspection pre-achat",
+    title: "Inspection pré-achat",
     description:
-      "Evaluation independante de la machine avant l'achat. Geometrie, electrique, mecanique — rapport complet.",
+      "Évaluation indépendante avant l'achat. Géométrie, électrique, mécanique — rapport complet.",
     scenarios:
-      "Evaluation de machines usagees, achats aux encheres, evaluations de relocalisation",
+      "Évaluation de machines usagées, achats aux enchères, évaluations avant déménagement",
     icon: "search",
   },
   {
     id: "installation",
     title: "Installation et mise en service",
     description:
-      "Reception de machine, mise a niveau, alignement, mise sous tension et mise en service pour equipement neuf ou relocalise.",
+      "Réception de machine, mise à niveau, alignement, mise sous tension et commissioning pour équipement neuf ou déménagé.",
     scenarios:
-      "Installation de nouvelle machine, relocalisation d'usine, deplacements de machines entre usines",
+      "Installation de nouvelle machine, déménagement d'usine, transfert de machines entre usines",
     icon: "package",
   },
   {
     id: "safety",
-    title: "Audit de securite et modification CSA",
+    title: "Audit de sécurité et modification CSA",
     description:
-      "Audits de conformite de securite et modifications CSA pour respecter les normes canadiennes en vigueur.",
+      "Audits de conformité et modifications CSA pour respecter les normes canadiennes en vigueur.",
     scenarios:
-      "Conformite CSA, mises a niveau de securite, modifications de protecteurs, systemes de verrouillage/etiquetage",
+      "Conformité CSA, mises à niveau de sécurité, modifications de gardes, systèmes de cadenassage",
     icon: "shield",
   },
 ];
 
 export const INDUSTRIES_FR = [
-  "Aerospatiale",
+  "Aérospatiale",
   "Automobile",
   "Biens de consommation",
   "Plastiques",
-  "Defense et militaire",
+  "Défense et militaire",
 ];
 
 export const COMMON_ISSUES_FR = [
   "Alarmes et pannes machine",
-  "Erreurs de positionnement d'axes",
-  "Derive geometrique et perte de tolerance",
-  "Problemes de changeur d'outils et de palettes",
-  "Pannes electriques et problemes intermittents",
-  "Defaillances hydrauliques et pneumatiques",
-  "Collisions machine et realignement",
+  "Erreurs de positionnement d'axe",
+  "Dérive géométrique et perte de tolérance",
+  "Problèmes de changeur d'outils et de palettes",
+  "Pannes électriques et problèmes intermittents",
+  "Défaillances hydrauliques et pneumatiques",
+  "Collisions et réalignement de machine",
 ];
 
 export const DIFFERENTIATORS_FR: Differentiator[] = [
   {
     title: "20 ans",
-    subtitle: "Experience",
+    subtitle: "D'expérience",
     description:
-      "Deux decennies a diagnostiquer et reparer des machines CNC dans l'aerospatiale, l'automobile et la defense.",
+      "Deux décennies à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense.",
   },
   {
-    title: "Independant",
-    subtitle: "Aucun biais de marque",
+    title: "Indépendant",
+    subtitle: "Aucun biais",
     description:
-      "Pas lie a aucun fabricant. Nous recommandons ce qui est juste, pas ce que nous vendons.",
+      "Pas affilié à aucun fabricant. On recommande ce qui est bon pour la machine, pas ce qu'on vend.",
   },
   {
-    title: "Meme jour",
-    subtitle: "Reponse",
+    title: "Même jour",
+    subtitle: "Réponse rapide",
     description:
-      "Machine en panne? Nous comprenons l'urgence. Reponse le meme jour dans le Grand Montreal.",
+      "Machine en panne? On comprend l'urgence. Réponse le même jour dans le Grand Montréal.",
   },
   {
-    title: "Honnete",
-    subtitle: "Diagnostic",
+    title: "Honnête",
+    subtitle: "Diagnostic clair",
     description:
-      "Communication claire, prix equitables, aucun travail inutile. Nous vous disons exactement ce qui ne va pas.",
+      "Communication franche, prix justes, pas de travail inutile. On vous dit exactement ce qui se passe.",
   },
 ];
 
-// UI strings
 export const UI_FR = {
   hero: {
     headline1: "Votre CNC est en panne.",
     headline2: "On la remet en marche.",
-    subtitle: "Diagnostic et reparation electromecaniques independants. 20 ans. 9 marques. Montreal.",
+    subtitle: "Diagnostic et réparation électromécanique indépendant. 20 ans. 15 marques. Montréal.",
     callBtn: "Appeler",
-    quoteBtn: "Demander un devis",
+    quoteBtn: "Demander une soumission",
     years: "Ans",
     brands: "Marques",
     industries: "Industries",
-    trustedBrands: "Expertise sur 9 marques majeures",
+    trustedBrands: "Expertise sur 15 marques majeures",
   },
   services: {
     label: "Services",
     heading: "Service CNC complet",
     viewAll: "Voir les 8 services",
     learnMore: "En savoir plus",
-    pageSubtitle: "Diagnostic et reparation CNC complets. Des pannes d'urgence a la maintenance planifiee — nous gardons vos machines en marche.",
-    commonIssues: "Problemes que nous resolvons chaque semaine",
+    pageSubtitle: "Diagnostic et réparation CNC de A à Z. Des urgences à la maintenance planifiée — on garde vos machines en marche.",
+    commonIssues: "Problèmes qu'on résout chaque semaine",
     trustedAcross: "Expertise reconnue",
-    majorBrands: "9 marques CNC majeures",
-    commonScenarios: "Scenarios courants",
+    majorBrands: "15 marques CNC majeures",
+    commonScenarios: "Cas fréquents",
     brandsLabel: "Marques",
   },
   industries: {
-    heading: "Secteurs de confiance",
-    quote: "Peu importe la machine, peu importe le secteur — si c'est du CNC, on l'a deja fait.",
+    heading: "Reconnu dans les secteurs critiques",
+    quote: "Peu importe la machine, peu importe le secteur — si c'est du CNC, on connaît ça.",
   },
   whyAvi: {
     heading: "Pourquoi AVI",
   },
   cta: {
-    headline: "Machine en panne? On la repare.",
+    headline: "Machine en panne? On s'en occupe.",
     callBtn: "Appeler",
-    quoteBtn: "Demander un devis",
+    quoteBtn: "Demander une soumission",
   },
   about: {
-    pageTitle: "A propos d'AVI Industriel",
+    pageTitle: "À propos d'AVI Industriel",
     storyLabel: "Notre histoire",
-    storyQuote: "Plus de 20 ans a diagnostiquer et reparer des machines CNC dans l'aerospatiale, l'automobile et la defense. J'ai commence sur le plancher d'usine et je n'en suis jamais parti — parce que c'est la que sont les vrais problemes.",
+    storyQuote: "Plus de 20 ans à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense. J'ai commencé sur le plancher d'usine et j'y suis resté — parce que c'est là que sont les vrais problèmes.",
     storyName: "Alexandre Vachon",
-    storyTitle: "Electromecanicien certifie — 20 ans d'experience",
+    storyTitle: "Électromécanicien certifié — 20 ans d'expérience",
     philosophyLabel: "Notre philosophie",
     philosophyItems: [
-      { title: "Honnetete", desc: "Nous vous disons exactement ce qui ne va pas, combien ca coute, et combien de temps ca prendra. Si vous n'avez pas besoin de la reparation, nous vous le dirons." },
-      { title: "Communication claire", desc: "Pas de jargon. Pas de rapports de 40 pages quand une phrase suffit. Nous expliquons ce qui s'est passe, pourquoi, et quoi faire ensuite." },
-      { title: "Prix equitables", desc: "Un prix honnete pour un travail honnete. Pas de frais caches, pas de pieces inutiles, pas de vente incitative." },
-      { title: "Reponse rapide", desc: "Reponse le meme jour dans le Grand Montreal. Nous comprenons que chaque heure d'arret coute de l'argent." },
+      { title: "Honnêteté", desc: "On vous dit exactement ce qui ne va pas, combien ça coûte, et combien de temps ça prend. Si la réparation est pas nécessaire, on vous le dit." },
+      { title: "Communication claire", desc: "Pas de jargon. Pas de rapports de 40 pages quand une phrase suffit. On explique ce qui s'est passé, pourquoi, et quoi faire ensuite." },
+      { title: "Prix justes", desc: "Un prix honnête pour un travail honnête. Pas de frais cachés, pas de pièces inutiles, pas de vente de pression." },
+      { title: "Réponse rapide", desc: "Réponse le même jour dans le Grand Montréal. On comprend que chaque heure d'arrêt coûte de l'argent." },
     ],
     certLabel: "Certifications",
-    certTitle: "Electromecanicien certifie",
-    certDesc: "Certification professionnelle en electromecanique avec plus de 20 ans d'experience pratique sur 9 plateformes CNC majeures.",
+    certTitle: "Électromécanicien certifié",
+    certDesc: "Certification professionnelle en électromécanique avec plus de 20 ans d'expérience terrain sur 15 plateformes CNC majeures.",
     areaLabel: "Zone de service",
-    areaTitle: "Base dans le Grand Montreal. Pret a voyager.",
-    areaDesc: "Service principal dans la region du Grand Montreal, avec disponibilite pour voyager partout au Quebec et au-dela pour des projets speciaux.",
+    areaTitle: "Basé dans le Grand Montréal. Prêt à se déplacer.",
+    areaDesc: "Service principal dans la région du Grand Montréal, disponible partout au Québec et au-delà pour des projets spéciaux.",
   },
   contact: {
     phoneHero: "Besoin d'aide maintenant?",
-    phoneResponse: "Nous repondons dans les 2 heures pendant les heures d'affaires.",
-    formTitle: "Demander un devis",
+    phoneResponse: "On répond en moins de 2 heures pendant les heures d'affaires.",
+    formTitle: "Demander une soumission",
     formName: "Nom",
     formCompany: "Entreprise",
     formEmail: "Courriel",
-    formPhone: "Telephone",
+    formPhone: "Téléphone",
     formBrand: "Marque de la machine",
-    formBrandPlaceholder: "Selectionnez une marque",
+    formBrandPlaceholder: "Choisir une marque",
     formUrgency: "Urgence",
     formUrgencyOptions: [
-      { value: "emergency", label: "Urgence — machine arretee maintenant" },
-      { value: "urgent", label: "Urgent — dans les 48 heures" },
-      { value: "scheduled", label: "Planifie — flexible" },
+      { value: "emergency", label: "Urgence — machine arrêtée maintenant" },
+      { value: "urgent", label: "Urgent — dans les 48 prochaines heures" },
+      { value: "scheduled", label: "Planifié — pas pressé" },
     ],
-    formIssue: "Decrivez le probleme",
-    formIssuePlaceholder: "Que se passe-t-il avec votre machine?",
+    formIssue: "Décrivez le problème",
+    formIssuePlaceholder: "Qu'est-ce qui se passe avec votre machine?",
     formSubmit: "Envoyer la demande",
-    formSuccess: "Nous avons recu votre demande. Nous vous contacterons bientot.",
-    altContact: "Pas urgent? Ecrivez-nous a",
+    formSuccess: "C'est reçu. On vous revient bientôt.",
+    altContact: "Pas urgent? Écrivez-nous à",
     areaTitle: "Zone de service",
-    areaDesc: "Grand Montreal et partout au Quebec. Pret a voyager.",
+    areaDesc: "Grand Montréal et partout au Québec. Prêt à se déplacer.",
   },
   nav: {
     home: "Accueil",
     services: "Services",
-    about: "A propos",
+    about: "À propos",
     contact: "Contact",
   },
   footer: {
-    tagline: "Diagnostic. Reparation. En marche.",
-    based: "Base dans le Grand Montreal. Pret a voyager.",
-    copyright: "2026 AVI Industriel Inc. Tous droits reserves.",
+    tagline: "Diagnostic. Réparation. En marche.",
+    based: "Basé dans le Grand Montréal. Prêt à se déplacer.",
+    copyright: "2026 AVI Industriel Inc. Tous droits réservés.",
   },
 };

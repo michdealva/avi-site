@@ -127,7 +127,7 @@ export default function HomeFR() {
           >
             {[
               { value: "20+", label: UI_FR.hero.years },
-              { value: "9", label: UI_FR.hero.brands },
+              { value: "15", label: UI_FR.hero.brands },
               { value: "5", label: UI_FR.hero.industries },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -151,19 +151,23 @@ export default function HomeFR() {
             <p className="mb-4 text-center text-[10px] uppercase tracking-[0.15em] text-steel-light/60">
               {UI_FR.hero.trustedBrands}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-              {BRANDS.map((brand) => (
-                <div
-                  key={brand.name}
-                  className="flex h-10 items-center justify-center opacity-40 transition-opacity hover:opacity-80"
-                >
-                  <img
-                    src={brand.logo}
-                    alt={brand.name}
-                    className="h-6 max-w-[90px] object-contain invert md:h-8 md:max-w-[110px]"
-                  />
-                </div>
-              ))}
+            <div className="relative overflow-hidden">
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-graphite to-transparent" />
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-graphite to-transparent" />
+              <div className="flex w-max animate-[marquee_30s_linear_infinite] items-center gap-12">
+                {[...BRANDS, ...BRANDS].map((brand, i) => (
+                  <div
+                    key={`${brand.name}-${i}`}
+                    className="flex h-10 flex-shrink-0 items-center justify-center opacity-40 transition-opacity hover:opacity-80"
+                  >
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="h-6 max-w-[90px] object-contain invert md:h-8 md:max-w-[110px]"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
