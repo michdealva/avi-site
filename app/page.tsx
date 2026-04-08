@@ -151,47 +151,34 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Trust bar logos - INSIDE hero on dark bg (Remy push #1) */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-16 border-t border-white/10 pt-8"
-          >
-            <p className="mb-4 text-center text-[10px] uppercase tracking-[0.15em] text-steel-light/60">
-              Trusted across 15 major brands
-            </p>
-            <div className="relative overflow-hidden">
-              {/* Fade edges */}
-              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-graphite to-transparent" />
-              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-graphite to-transparent" />
-              {/* Scrolling track - duplicate for seamless loop */}
-              <div className="flex w-max animate-[marquee_30s_linear_infinite] items-center gap-12">
-                {[...BRANDS, ...BRANDS].map((brand, i) => (
-                  <div
-                    key={`${brand.name}-${i}`}
-                    className="flex h-10 flex-shrink-0 items-center justify-center opacity-40 transition-opacity hover:opacity-80"
-                  >
-                    <img
-                      src={brand.logo}
-                      alt={brand.name}
-                      className="h-6 max-w-[90px] object-contain invert md:h-8 md:max-w-[110px]"
-                      width={110}
-                      height={40}
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+          {/* Trust bar moved to green banner below hero */}
         </div>
       </section>
 
-      {/* ── Section Divider ── */}
-      <div className="flex justify-center py-6 bg-workshop">
-        <div className="h-0.5 w-16 bg-signal rounded-full" />
-      </div>
+      {/* ── Brand Logo Banner (Green) ── */}
+      <section className="bg-signal py-5 overflow-hidden">
+        <div className="relative">
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-signal to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-signal to-transparent" />
+          <div className="flex w-max animate-[marquee_25s_linear_infinite] items-center gap-16">
+            {[...BRANDS, ...BRANDS].map((brand, i) => (
+              <div
+                key={`${brand.name}-${i}`}
+                className="flex h-8 flex-shrink-0 items-center justify-center"
+              >
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="h-5 max-w-[100px] object-contain md:h-6 md:max-w-[120px]"
+                  width={110}
+                  height={24}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── Services Snapshot ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
@@ -212,7 +199,7 @@ export default function Home() {
             <ScrollReveal>
               <Link
                 href={`/services#${SERVICES[0].id}`}
-                className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 md:flex md:gap-8 md:items-start hover:border-signal transition-colors duration-300"
+                className="group block rounded-lg border border-border-light bg-white p-8 md:flex md:gap-8 md:items-start hover:border-signal transition-colors duration-300"
               >
                 {(() => {
                   const Icon = SERVICE_ICON_MAP[SERVICES[0].icon];
@@ -241,7 +228,7 @@ export default function Home() {
                 <ScrollReveal key={service.id} delay={(i + 1) * 80}>
                   <Link
                     href={`/services#${service.id}`}
-                    className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
+                    className="group block rounded-lg border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
                   >
                     {(() => {
                       const Icon = SERVICE_ICON_MAP[service.icon];
