@@ -15,7 +15,7 @@ export const BRANDS: Brand[] = [
   { name: "TOS", logo: "/brands/tos.svg" },
   { name: "Emmegi", logo: "/brands/emmegi.png" },
   { name: "Fanuc", logo: "/brands/Fanuc_logo.svg" },
-  { name: "Siemens", logo: "/brands/siemens-wordmark.svg" },
+  { name: "Siemens", logo: "/brands/siemens.png" },
   { name: "Hurco", logo: "/brands/Hurco.webp" },
   { name: "DMG Mori", logo: "/brands/dmg-mori.png" },
   { name: "Okuma", logo: "/brands/okuma-wordmark.svg" },
