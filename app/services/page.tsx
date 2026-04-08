@@ -13,7 +13,8 @@ import {
 export const metadata: Metadata = {
   title: "Services | AVI Industriel",
   description:
-    "Full-spectrum CNC diagnostics and repair services: geometry alignment, electrical troubleshooting, preventive maintenance, pre-purchase inspection, and more.",
+    "Full-spectrum CNC diagnostics and repair: geometry alignment, electrical troubleshooting, preventive maintenance, and pre-purchase inspection. 15 brands supported.",
+  alternates: { canonical: "https://aviindustriel.com/services" },
 };
 import CrosshairIllustration from "@/components/illustrations/Crosshair";
 import CircuitBoard from "@/components/illustrations/CircuitBoard";

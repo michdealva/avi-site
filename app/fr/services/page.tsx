@@ -11,9 +11,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | AVI Industriel",
+  title: "Services de r\u00e9paration CNC | AVI Industriel",
   description:
-    "Diagnostic et réparation CNC de A à Z : géométrie, dépannage électrique, maintenance préventive, inspection pré-achat et plus.",
+    "Diagnostic et r\u00e9paration CNC de A \u00e0 Z : g\u00e9om\u00e9trie, d\u00e9pannage \u00e9lectrique, maintenance pr\u00e9ventive, inspection pr\u00e9-achat. 15 marques, Grand Montr\u00e9al.",
+  alternates: { canonical: "https://aviindustriel.com/fr/services" },
 };
 import CrosshairIllustration from "@/components/illustrations/Crosshair";
 import CircuitBoard from "@/components/illustrations/CircuitBoard";

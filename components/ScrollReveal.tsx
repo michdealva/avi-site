@@ -33,8 +33,16 @@ export default function ScrollReveal({
 
     observer.observe(el);
 
+    // Fallback: force reveal after 2s if IntersectionObserver hasn't triggered
+    const fallbackTimer = setTimeout(() => {
+      if (!el.classList.contains("revealed")) {
+        el.classList.add("revealed");
+      }
+    }, 2000 + delay);
+
     return () => {
       observer.disconnect();
+      clearTimeout(fallbackTimer);
     };
   }, [delay]);
 

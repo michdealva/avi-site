@@ -4,7 +4,8 @@ import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "About | AVI Industriel",
   description:
-    "Meet Alexandre Vachon, certified electro-mechanic with 20 years of CNC diagnostics and repair experience. Independent, honest, and fast.",
+    "Meet Alexandre Vachon, certified electro-mechanic with 20 years of CNC diagnostics and repair experience across 15 major brands. Independent, honest, and fast.",
+  alternates: { canonical: "https://aviindustriel.com/about" },
 };
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";

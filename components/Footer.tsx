@@ -9,6 +9,7 @@ const NAV_LINKS_EN = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy", href: "/privacy" },
 ];
 
 const NAV_LINKS_FR = [
@@ -16,6 +17,7 @@ const NAV_LINKS_FR = [
   { label: "Services", href: "/fr/services" },
   { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
+  { label: "Confidentialit\u00e9", href: "/fr/privacy" },
 ];
 
 export default function Footer() {
@@ -33,6 +35,8 @@ export default function Footer() {
               src="/avi-logo.svg"
               alt="AVI Industriel"
               className="h-8 w-auto"
+              width={100}
+              height={32}
               style={{
                 filter:
                   "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",

@@ -60,6 +60,8 @@ export default function Header() {
             src="/avi-logo.svg"
             alt="AVI Industriel"
             className="h-10 w-auto"
+            width={120}
+            height={40}
             style={{
               filter:
                 "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",

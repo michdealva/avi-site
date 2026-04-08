@@ -6,7 +6,8 @@ import QuoteForm from "./QuoteForm";
 export const metadata: Metadata = {
   title: "Contact | AVI Industriel",
   description:
-    "Call (514) 971-1284 for same-day CNC diagnostics and repair in Greater Montreal, or request a quote online.",
+    "Call (514) 971-1284 for same-day CNC diagnostics and repair in Greater Montreal, or request a quote online. We respond within 2 hours.",
+  alternates: { canonical: "https://aviindustriel.com/contact" },
 };
 
 export default function ContactPage() {

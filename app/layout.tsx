@@ -19,8 +19,26 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "AVI Industriel Inc. | CNC Diagnostics & Repair | Montreal",
   description:
-    "Your CNC is down. We get it running. Independent electromechanical diagnostics and repair. 20 years experience, 15 major brands. Greater Montreal.",
+    "Independent CNC diagnostics and repair in Greater Montreal. 20 years of hands-on experience across 15 major brands including Fanuc, Siemens, and Mitsubishi.",
   metadataBase: new URL("https://aviindustriel.com"),
+  alternates: {
+    canonical: "https://aviindustriel.com",
+  },
+  openGraph: {
+    title: "AVI Industriel Inc. | CNC Diagnostics & Repair",
+    description:
+      "Independent CNC diagnostics and repair in Greater Montreal. 20 years of hands-on experience across 15 major brands including Fanuc, Siemens, and Mitsubishi.",
+    url: "https://aviindustriel.com",
+    siteName: "AVI Industriel Inc.",
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "AVI Industriel Inc. | CNC Diagnostics & Repair",
+    description:
+      "Independent CNC diagnostics and repair in Greater Montreal. 20 years of experience across 15 major brands.",
+  },
 };
 
 export default function RootLayout({

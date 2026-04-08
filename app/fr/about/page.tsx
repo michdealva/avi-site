@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "À propos | AVI Industriel",
+  title: "\u00c0 propos | AVI Industriel Inc.",
   description:
-    "Alexandre Vachon, électromécanicien certifié avec 20 ans d'expérience en diagnostic et réparation CNC. Indépendant, honnête et rapide.",
+    "Alexandre Vachon, \u00e9lectrom\u00e9canicien certifi\u00e9 avec 20 ans d\u2019exp\u00e9rience en diagnostic et r\u00e9paration CNC. 15 marques, Grand Montr\u00e9al. Ind\u00e9pendant et honn\u00eate.",
+  alternates: { canonical: "https://aviindustriel.com/fr/about" },
 };
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";

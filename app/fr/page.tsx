@@ -55,10 +55,10 @@ export default function HomeFR() {
   return (
     <main>
       {/* -- Hero -- */}
-      <section className="relative flex min-h-screen items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
+      <section className="relative flex min-h-[85vh] items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
         <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none pulse-subtle" />
 
-        <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 md:py-28 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 py-16 md:py-20 text-center">
           {/* AVI Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -69,7 +69,10 @@ export default function HomeFR() {
             <img
               src="/avi-logo.svg"
               alt="AVI Industriel"
-              className="mx-auto h-20 md:h-28 w-auto"
+              className="mx-auto h-12 md:h-16 w-auto"
+              width={200}
+              height={100}
+              fetchPriority="high"
               style={{
                 filter:
                   "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)",
@@ -164,6 +167,9 @@ export default function HomeFR() {
                       src={brand.logo}
                       alt={brand.name}
                       className="h-6 max-w-[90px] object-contain invert md:h-8 md:max-w-[110px]"
+                      width={110}
+                      height={40}
+                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -175,7 +181,7 @@ export default function HomeFR() {
 
       {/* -- Services Snapshot -- */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.12] pointer-events-none float-slow" />
+        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.22] pointer-events-none float-slow" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
@@ -192,7 +198,7 @@ export default function HomeFR() {
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link
                   href={`/fr/services#${service.id}`}
-                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 transition-all hover:shadow-lg hover:shadow-signal/5"
+                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 hover:shadow-signal/5"
                 >
                   {(() => {
                     const Icon = SERVICE_ICON_MAP[service.icon];
@@ -232,38 +238,32 @@ export default function HomeFR() {
       {/* -- Industries -- */}
       <section className="bg-concrete py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
-              {UI_FR.industries.heading}
-            </h2>
-          </ScrollReveal>
+          <h2 className="text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
+            {UI_FR.industries.heading}
+          </h2>
 
-          <ScrollReveal delay={100}>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
-              {INDUSTRIES_FR.map((industry, i) => (
-                <span key={industry} className="flex items-center gap-4">
-                  <span className="text-xl font-semibold text-machine-black md:text-2xl">
-                    {industry}
-                  </span>
-                  {i < INDUSTRIES_FR.length - 1 && (
-                    <span className="text-xl text-signal">&middot;</span>
-                  )}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
+            {INDUSTRIES_FR.map((industry, i) => (
+              <span key={industry} className="flex items-center gap-4">
+                <span className="text-xl font-semibold text-machine-black md:text-2xl">
+                  {industry}
                 </span>
-              ))}
-            </div>
-          </ScrollReveal>
+                {i < INDUSTRIES_FR.length - 1 && (
+                  <span className="text-xl text-signal">&middot;</span>
+                )}
+              </span>
+            ))}
+          </div>
 
-          <ScrollReveal delay={200}>
-            <p className="mx-auto mt-10 max-w-lg text-base italic text-shop-grey">
-              &laquo;&nbsp;{UI_FR.industries.quote}&nbsp;&raquo;
-            </p>
-          </ScrollReveal>
+          <p className="mx-auto mt-10 max-w-lg text-base italic text-shop-grey">
+            &laquo;&nbsp;{UI_FR.industries.quote}&nbsp;&raquo;
+          </p>
         </div>
       </section>
 
       {/* -- Why AVI -- */}
       <section className="relative bg-graphite grid-texture py-24 overflow-hidden">
-        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.15] pointer-events-none float float-delay-1" />
+        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.2] pointer-events-none float float-delay-1" />
         <CrosshairIllustration className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-20 pointer-events-none float-slow float-delay-2" />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
