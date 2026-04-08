@@ -71,7 +71,7 @@ export default function ServiceCarousel({
 
   return (
     <div
-      className="relative"
+      className="relative overflow-visible"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -106,7 +106,7 @@ export default function ServiceCarousel({
       {/* Scrollable track */}
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide pb-4"
+        className="flex gap-5 overflow-x-auto overflow-y-visible scrollbar-hide py-8 -my-8 px-2"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {services.map((service) => {

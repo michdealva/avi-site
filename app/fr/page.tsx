@@ -185,7 +185,7 @@ export default function HomeFR() {
       </section>
 
       {/* -- Services Snapshot -- */}
-      <section className="relative bg-workshop py-24 overflow-hidden">
+      <section className="relative bg-workshop py-24 overflow-x-clip">
 
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
