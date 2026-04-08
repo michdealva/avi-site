@@ -198,7 +198,7 @@ export default function HomeFR() {
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link
                   href={`/fr/services#${service.id}`}
-                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 hover:shadow-signal/5"
+                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
                 >
                   {(() => {
                     const Icon = SERVICE_ICON_MAP[service.icon];
@@ -309,7 +309,7 @@ export default function HomeFR() {
       {/* -- Floating phone CTA -- mobile only -- */}
       <a
         href={PHONE_LINK}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-signal shadow-lg shadow-signal/30 transition-transform hover:scale-110 md:hidden"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-signal ring-2 ring-signal/30 transition-transform hover:scale-110 md:hidden"
         aria-label="Appeler AVI"
       >
         <Phone className="h-6 w-6 text-white" />
