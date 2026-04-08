@@ -40,15 +40,7 @@ export async function POST(request: Request) {
       });
     } else {
       // Console fallback when no Resend key
-      console.log("=== NEW QUOTE REQUEST ===");
-      console.log(`Name: ${name}`);
-      console.log(`Company: ${company}`);
-      console.log(`Email: ${email}`);
-      console.log(`Phone: ${phone || "N/A"}`);
-      console.log(`Brand: ${brand || "N/A"}`);
-      console.log(`Urgency: ${urgency || "N/A"}`);
-      console.log(`Description: ${description || "N/A"}`);
-      console.log("=========================");
+      console.log("New quote request:", { name, company, email, phone, brand, urgency, description });
     }
 
     return NextResponse.json({ success: true });

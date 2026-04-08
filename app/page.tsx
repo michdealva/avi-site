@@ -67,7 +67,7 @@ export default function Home() {
           >
             <img
               src="/avi-logo.svg"
-              alt=""
+              alt="AVI Industriel"
               className="mx-auto h-20 md:h-28 w-auto"
               style={{
                 filter:
@@ -94,7 +94,7 @@ export default function Home() {
             className="mx-auto mt-6 max-w-xl text-xl text-steel-light"
           >
             Independent electromechanical diagnostics and repair. 20&nbsp;years.
-            9&nbsp;brands. Montreal.
+            15&nbsp;brands. Montreal.
           </motion.p>
 
           <motion.div
@@ -141,7 +141,7 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Trust bar logos — INSIDE hero on dark bg (Remy push #1) */}
+          {/* Trust bar logos - INSIDE hero on dark bg (Remy push #1) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -155,7 +155,7 @@ export default function Home() {
               {/* Fade edges */}
               <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-graphite to-transparent" />
               <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-graphite to-transparent" />
-              {/* Scrolling track — duplicate for seamless loop */}
+              {/* Scrolling track - duplicate for seamless loop */}
               <div className="flex w-max animate-[marquee_30s_linear_infinite] items-center gap-12">
                 {[...BRANDS, ...BRANDS].map((brand, i) => (
                   <div
@@ -257,7 +257,7 @@ export default function Home() {
 
           <ScrollReveal delay={200}>
             <p className="mx-auto mt-10 max-w-lg text-base italic text-shop-grey">
-              &ldquo;Whatever the machine, whatever the sector &mdash; if
+              &ldquo;Whatever the machine, whatever the sector: if
               it&rsquo;s CNC, we&rsquo;ve worked on it.&rdquo;
             </p>
           </ScrollReveal>
@@ -304,7 +304,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <CTABand headline="Machine down? Let's fix it." />
 
-      {/* ── Floating phone CTA — mobile only (Remy push #5) ── */}
+      {/* Floating phone CTA - mobile only (Remy push #5) */}
       <a
         href={PHONE_LINK}
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-signal shadow-lg shadow-signal/30 transition-transform hover:scale-110 md:hidden"

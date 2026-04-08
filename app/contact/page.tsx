@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import { PHONE, PHONE_LINK, EMAIL } from "@/data/content";
 import QuoteForm from "./QuoteForm";
+
+export const metadata: Metadata = {
+  title: "Contact | AVI Industriel",
+  description:
+    "Call (514) 971-1284 for same-day CNC diagnostics and repair in Greater Montreal, or request a quote online.",
+};
 
 export default function ContactPage() {
   return (

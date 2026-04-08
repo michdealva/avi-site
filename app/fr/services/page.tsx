@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Wrench,
   Crosshair,
@@ -8,6 +9,12 @@ import {
   Package,
   Shield,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services | AVI Industriel",
+  description:
+    "Diagnostic et réparation CNC de A à Z : géométrie, dépannage électrique, maintenance préventive, inspection pré-achat et plus.",
+};
 import CrosshairIllustration from "@/components/illustrations/Crosshair";
 import CircuitBoard from "@/components/illustrations/CircuitBoard";
 import type { LucideIcon } from "lucide-react";

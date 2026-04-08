@@ -46,9 +46,9 @@ const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
 
 const DIFF_ICON_MAP: Record<string, LucideIcon> = {
   "20 ans": Clock,
-  "Independant": ShieldCheck,
-  "Meme jour": Zap,
-  "Honnete": MessageSquare,
+  "Indépendant": ShieldCheck,
+  "Même jour": Zap,
+  "Honnête": MessageSquare,
 };
 
 export default function HomeFR() {
@@ -68,7 +68,7 @@ export default function HomeFR() {
           >
             <img
               src="/avi-logo.svg"
-              alt=""
+              alt="AVI Industriel"
               className="mx-auto h-20 md:h-28 w-auto"
               style={{
                 filter:

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About | AVI Industriel",
+  description:
+    "Meet Alexandre Vachon, certified electro-mechanic with 20 years of CNC diagnostics and repair experience. Independent, honest, and fast.",
+};
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
@@ -37,7 +44,7 @@ export default function AboutPage() {
             <blockquote className="border-l-4 border-signal pl-6 md:pl-8">
               <p className="text-xl leading-relaxed text-machine-black md:text-2xl">
                 &ldquo;I started AVI because I saw too many shops getting burned
-                &mdash; overcharged for parts they didn&rsquo;t need, told a
+                : overcharged for parts they didn&rsquo;t need, told a
                 machine was dead when it just needed a drive replaced. I wanted
                 to be the person I&rsquo;d want to call if my own machine went
                 down: honest, fast, and fair.&rdquo;
@@ -180,7 +187,7 @@ export default function AboutPage() {
               same-day response for emergencies. We regularly service shops
               across the South Shore, North Shore, Laval, and the Eastern
               Townships. For specialized jobs, we travel throughout Quebec and
-              beyond &mdash; wherever the machine needs us.
+              beyond, wherever the machine needs us.
             </p>
           </ScrollReveal>
         </div>

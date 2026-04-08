@@ -7,7 +7,7 @@ export const SERVICES_FR: Service[] = [
     id: "diagnostics",
     title: "Diagnostic et réparation",
     description:
-      "Diagnostic rapide des pannes, résolution des codes d'alarme et réparation CNC. On trouve la vraie cause — pas juste le symptôme.",
+      "Diagnostic rapide des pannes, résolution des codes d'alarme et réparation CNC. On trouve la vraie cause, pas juste le symptôme.",
     scenarios:
       "Alarmes machine, erreurs d'axe, pannes soudaines, diagnostic après collision",
     icon: "wrench",
@@ -34,7 +34,7 @@ export const SERVICES_FR: Service[] = [
     id: "mechanical",
     title: "Mécanique, pneumatique et hydraulique",
     description:
-      "Service complet des systèmes mécaniques — vis à billes, roulements, unités hydrauliques et actionneurs pneumatiques.",
+      "Service complet des systèmes mécaniques : vis à billes, roulements, unités hydrauliques et actionneurs pneumatiques.",
     scenarios:
       "Fuites hydrauliques, perte de pression pneumatique, bruit de roulement, jeu dans les vis à billes",
     icon: "cog",
@@ -52,7 +52,7 @@ export const SERVICES_FR: Service[] = [
     id: "inspection",
     title: "Inspection pré-achat",
     description:
-      "Évaluation indépendante avant l'achat. Géométrie, électrique, mécanique — rapport complet.",
+      "Évaluation indépendante avant l'achat. Géométrie, électrique, mécanique. Rapport complet.",
     scenarios:
       "Évaluation de machines usagées, achats aux enchères, évaluations avant déménagement",
     icon: "search",
@@ -139,7 +139,7 @@ export const UI_FR = {
     heading: "Service CNC complet",
     viewAll: "Voir les 8 services",
     learnMore: "En savoir plus",
-    pageSubtitle: "Diagnostic et réparation CNC de A à Z. Des urgences à la maintenance planifiée — on garde vos machines en marche.",
+    pageSubtitle: "Diagnostic et réparation CNC de A à Z. Des urgences à la maintenance planifiée, on garde vos machines en marche.",
     commonIssues: "Problèmes qu'on résout chaque semaine",
     trustedAcross: "Expertise reconnue",
     majorBrands: "15 marques CNC majeures",
@@ -148,7 +148,7 @@ export const UI_FR = {
   },
   industries: {
     heading: "Reconnu dans les secteurs critiques",
-    quote: "Peu importe la machine, peu importe le secteur — si c'est du CNC, on connaît ça.",
+    quote: "Peu importe la machine, peu importe le secteur : si c'est du CNC, on connaît ça.",
   },
   whyAvi: {
     heading: "Pourquoi AVI",
@@ -161,9 +161,9 @@ export const UI_FR = {
   about: {
     pageTitle: "À propos d'AVI Industriel",
     storyLabel: "Notre histoire",
-    storyQuote: "Plus de 20 ans à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense. J'ai commencé sur le plancher d'usine et j'y suis resté — parce que c'est là que sont les vrais problèmes.",
+    storyQuote: "Plus de 20 ans à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense. J'ai commencé sur le plancher d'usine et j'y suis resté, parce que c'est là que sont les vrais problèmes.",
     storyName: "Alexandre Vachon",
-    storyTitle: "Électromécanicien certifié — 20 ans d'expérience",
+    storyTitle: "Électromécanicien certifié, 20 ans d'expérience",
     philosophyLabel: "Notre philosophie",
     philosophyItems: [
       { title: "Honnêteté", desc: "On vous dit exactement ce qui ne va pas, combien ça coûte, et combien de temps ça prend. Si la réparation est pas nécessaire, on vous le dit." },
@@ -190,9 +190,9 @@ export const UI_FR = {
     formBrandPlaceholder: "Choisir une marque",
     formUrgency: "Urgence",
     formUrgencyOptions: [
-      { value: "emergency", label: "Urgence — machine arrêtée maintenant" },
-      { value: "urgent", label: "Urgent — dans les 48 prochaines heures" },
-      { value: "scheduled", label: "Planifié — pas pressé" },
+      { value: "emergency", label: "Urgence : machine arrêtée maintenant" },
+      { value: "urgent", label: "Urgent : dans les 48 prochaines heures" },
+      { value: "scheduled", label: "Planifié : pas pressé" },
     ],
     formIssue: "Décrivez le problème",
     formIssuePlaceholder: "Qu'est-ce qui se passe avec votre machine?",

@@ -17,9 +17,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AVI Industriel Inc. — CNC Diagnostics & Repair | Montreal",
+  title: "AVI Industriel Inc. | CNC Diagnostics & Repair | Montreal",
   description:
-    "Your CNC is down. We get it running. Independent electromechanical diagnostics and repair. 20 years experience, 9 major brands. Greater Montreal.",
+    "Your CNC is down. We get it running. Independent electromechanical diagnostics and repair. 20 years experience, 15 major brands. Greater Montreal.",
   metadataBase: new URL("https://aviindustriel.com"),
 };
 

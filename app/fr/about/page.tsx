@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "À propos | AVI Industriel",
+  description:
+    "Alexandre Vachon, électromécanicien certifié avec 20 ans d'expérience en diagnostic et réparation CNC. Indépendant, honnête et rapide.",
+};
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
@@ -6,10 +13,10 @@ import GearSystem from "@/components/illustrations/GearSystem";
 import { UI_FR } from "@/data/content-fr";
 
 const PHILOSOPHY_ICON_MAP: Record<string, LucideIcon> = {
-  "Honnetete": Eye,
+  "Honnêteté": Eye,
   "Communication claire": MessageCircle,
-  "Prix equitables": DollarSign,
-  "Reponse rapide": Zap,
+  "Prix justes": DollarSign,
+  "Réponse rapide": Zap,
 };
 
 export default function AboutPageFR() {

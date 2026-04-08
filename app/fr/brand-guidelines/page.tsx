@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Guide de marque | AVI Industriel",
+  description:
+    "Guide de marque AVI Industriel : positionnement, voix, palette de couleurs, typographie, logo et normes de contenu.",
+};
 
 const COLORS = [
   { name: "Signal Green", hex: "#2ECC52", usage: "CTA, surbrillance, logo, états actifs", dark: false, bg: "bg-[#2ECC52]" },
@@ -34,7 +41,7 @@ export default function BrandGuidelinesFR() {
             style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }}
           />
           <h1 className="text-4xl font-extrabold tracking-tight text-bright md:text-6xl">Guide de marque</h1>
-          <p className="mt-4 text-steel-light text-lg">AVI Industriel Inc. &mdash; Préparé par EMBI Studio, avril 2026</p>
+          <p className="mt-4 text-steel-light text-lg">AVI Industriel Inc. | Préparé par EMBI Studio, avril 2026</p>
         </div>
       </section>
 
@@ -46,7 +53,7 @@ export default function BrandGuidelinesFR() {
             <h2 className="text-3xl font-bold tracking-tight text-machine-black mb-8">Positionnement de marque</h2>
             <div className="bg-white border border-border-light rounded-lg p-8 mb-8">
               <p className="text-lg leading-relaxed text-machine-black italic">
-                &laquo;&nbsp;Pour les manufacturiers du Grand Montréal dont les machines CNC sont en panne, AVI Industriel est le spécialiste électromécanique indépendant qui diagnostique et répare rapidement — parce que 20 ans sur 15 marques majeures veut dire qu'Alexandre a déjà vu votre problème exact.&nbsp;&raquo;
+                &laquo;&nbsp;Pour les manufacturiers du Grand Montréal dont les machines CNC sont en panne, AVI Industriel est le spécialiste électromécanique indépendant qui diagnostique et répare rapidement, parce que 20 ans sur 15 marques majeures veut dire qu'Alexandre a déjà vu votre problème exact.&nbsp;&raquo;
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -76,7 +83,7 @@ export default function BrandGuidelinesFR() {
               { title: "Honnêteté", desc: "On vous dit exactement ce qui ne va pas, combien ça coûte et combien de temps ça va prendre. Si vous n'avez pas besoin de la réparation, on va vous le dire. On préfère perdre un contrat que perdre la confiance." },
               { title: "Indépendance", desc: "Pas lié à aucun fabricant. On recommande ce qui est bon pour la machine, pas ce qu'on vend. Pas de vente de pièces. Pas de biais de marque. Pas de contrat captif." },
               { title: "Urgence", desc: "Production arrêtée, ça veut dire de l'argent perdu. On comprend la pression. Réponse le même jour dans le Grand Montréal. Pas de chaînes de messagerie vocale. Pas de systèmes de tickets. Un appel." },
-              { title: "Clarté", desc: "Pas de jargon. Pas de rapports de 40 pages quand une phrase suffit. On explique ce qui s'est passé, pourquoi, et quoi faire ensuite — dans un langage que tout le monde sur le plancher comprend." },
+              { title: "Clarté", desc: "Pas de jargon. Pas de rapports de 40 pages quand une phrase suffit. On explique ce qui s'est passé, pourquoi, et quoi faire ensuite, dans un langage que tout le monde sur le plancher comprend." },
             ].map((v, i) => (
               <ScrollReveal key={v.title} delay={i * 60}>
                 <div className="bg-white border border-border-light rounded-lg p-6 flex gap-4">
@@ -98,7 +105,7 @@ export default function BrandGuidelinesFR() {
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.15em] text-dust mb-2">03</p>
             <h2 className="text-3xl font-bold tracking-tight text-machine-black mb-4">Voix et ton</h2>
-            <p className="text-shop-grey text-base mb-10">AVI sonne comme un technicien sénior qui briefe un directeur d'usine. Calme, compétent, direct. Pas en train de vendre — en train de diagnostiquer.</p>
+            <p className="text-shop-grey text-base mb-10">AVI sonne comme un technicien sénior qui briefe un directeur d'usine. Calme, compétent, direct. Pas en train de vendre. En train de diagnostiquer.</p>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
@@ -167,18 +174,18 @@ export default function BrandGuidelinesFR() {
           <ScrollReveal delay={100}>
             <div className="space-y-8">
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Titres — Inter ExtraBold / Bold</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Titres : Inter ExtraBold / Bold</p>
                 <p className="text-5xl font-extrabold tracking-[-0.03em] text-machine-black">Titre principal</p>
                 <p className="text-3xl font-bold tracking-tight text-machine-black mt-4">Titre de section</p>
                 <p className="text-lg font-semibold text-machine-black mt-4">Titre de carte</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Corps — Inter Regular / Medium</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Corps : Inter Regular / Medium</p>
                 <p className="text-base text-shop-grey leading-relaxed">Texte courant à 16px. Utilisé pour les paragraphes, descriptions et contenu général. Interligne 1.6 pour une lecture confortable.</p>
                 <p className="text-sm text-shop-grey leading-relaxed mt-4">Petit corps à 14px. Utilisé pour les légendes, informations secondaires et textes de support.</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Technique — JetBrains Mono</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Technique : JetBrains Mono</p>
                 <p className="font-mono text-2xl font-bold text-signal">Makino · Mazak · Fanuc</p>
                 <p className="font-mono text-base text-shop-grey mt-4">(514) 971-1284</p>
                 <p className="font-mono text-xs text-dust mt-4 uppercase tracking-[0.1em]">Libellé de section</p>
@@ -275,7 +282,7 @@ export default function BrandGuidelinesFR() {
             <div className="space-y-4">
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">15 secondes</span>
-                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&laquo;&nbsp;AVI Industriel — diagnostic et réparation CNC indépendants à Montréal. 20 ans, 15 marques majeures, réponse le même jour. Votre machine est en panne, on la remet en marche.&nbsp;&raquo;</p>
+                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&laquo;&nbsp;AVI Industriel : diagnostic et réparation CNC indépendants à Montréal. 20 ans, 15 marques majeures, réponse le même jour. Votre machine est en panne, on la remet en marche.&nbsp;&raquo;</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">30 secondes</span>
@@ -283,7 +290,7 @@ export default function BrandGuidelinesFR() {
               </div>
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">60 secondes</span>
-                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&laquo;&nbsp;Quand une machine CNC tombe en panne, la production saigne de l'argent. La plupart des manufacturiers attendent des jours pour un technicien OEM qui ne dessert qu'une seule marque. AVI Industriel, c'est différent. Alexandre Vachon est un électromécanicien certifié avec 20 ans d'expérience sur 15 plateformes CNC majeures. Il est indépendant — pas de pièces à vendre, pas de fidélité de marque, pas de contrat captif. Juste un diagnostic honnête et une réparation rapide. Réponse le même jour dans le Grand Montréal, prêt à se déplacer au-delà. Des pannes d'urgence à la maintenance préventive, des inspections pré-achat aux audits de sécurité — si c'est du CNC, il a déjà vu votre problème exact. Appelez le (514) 971-1284.&nbsp;&raquo;</p>
+                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&laquo;&nbsp;Quand une machine CNC tombe en panne, la production saigne de l'argent. La plupart des manufacturiers attendent des jours pour un technicien OEM qui ne dessert qu'une seule marque. AVI Industriel, c'est différent. Alexandre Vachon est un électromécanicien certifié avec 20 ans d'expérience sur 15 plateformes CNC majeures. Il est indépendant : pas de pièces à vendre, pas de fidélité de marque, pas de contrat captif. Juste un diagnostic honnête et une réparation rapide. Réponse le même jour dans le Grand Montréal, prêt à se déplacer au-delà. Des pannes d'urgence à la maintenance préventive, des inspections pré-achat aux audits de sécurité : si c'est du CNC, il a déjà vu votre problème exact. Appelez le (514) 971-1284.&nbsp;&raquo;</p>
               </div>
             </div>
           </ScrollReveal>
@@ -303,7 +310,7 @@ export default function BrandGuidelinesFR() {
             <div className="grid md:grid-cols-2 gap-3 mb-8">
               <div className="bg-signal/5 border border-signal/20 rounded-lg p-4">
                 <span className="text-[10px] uppercase tracking-[0.15em] text-signal font-semibold block mb-2">Bon</span>
-                <p className="text-sm text-machine-black">&laquo;&nbsp;Dérive d'axe après un impact? On réaligne la géométrie sur toutes les plateformes majeures — Makino, Mazak, Haas — et on vous remet en tolérance.&nbsp;&raquo;</p>
+                <p className="text-sm text-machine-black">&laquo;&nbsp;Dérive d'axe après un impact? On réaligne la géométrie sur toutes les plateformes majeures (Makino, Mazak, Haas) et on vous remet en tolérance.&nbsp;&raquo;</p>
               </div>
               <div className="bg-red-50 border border-red-200/30 rounded-lg p-4">
                 <span className="text-[10px] uppercase tracking-[0.15em] text-red-400 font-semibold block mb-2">Mauvais</span>
@@ -354,8 +361,8 @@ export default function BrandGuidelinesFR() {
             <div className="space-y-2 text-sm text-shop-grey">
               <p>&bull; Maximum 2 hashtags par publication. Plusieurs publications n'en ont pas besoin du tout.</p>
               <p>&bull; Pas d'émojis dans les publications professionnelles. Un maximum si le ton le justifie.</p>
-              <p>&bull; Première personne — &laquo;&nbsp;je&nbsp;&raquo; et non &laquo;&nbsp;nous&nbsp;&raquo; ou &laquo;&nbsp;l'équipe&nbsp;&raquo;.</p>
-              <p>&bull; Les publications en anglais sont acceptables — Montréal est bilingue.</p>
+              <p>&bull; Première personne : &laquo;&nbsp;je&nbsp;&raquo; et non &laquo;&nbsp;nous&nbsp;&raquo; ou &laquo;&nbsp;l'équipe&nbsp;&raquo;.</p>
+              <p>&bull; Les publications en anglais sont acceptables. Montréal est bilingue.</p>
               <p>&bull; Écrire comme si on textait un collègue, pas comme si on rédigeait une pub.</p>
             </div>
           </ScrollReveal>
@@ -365,7 +372,7 @@ export default function BrandGuidelinesFR() {
       {/* Footer */}
       <section className="bg-graphite py-12">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-steel-light/40 text-xs">Préparé par EMBI Studio &mdash; <a href="https://embi-studio.com" className="text-signal/50 hover:text-signal transition-colors">embi-studio.com</a></p>
+          <p className="text-steel-light/40 text-xs">Préparé par EMBI Studio | <a href="https://embi-studio.com" className="text-signal/50 hover:text-signal transition-colors">embi-studio.com</a></p>
         </div>
       </section>
     </main>

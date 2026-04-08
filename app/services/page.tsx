@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Wrench,
   Crosshair,
@@ -8,6 +9,12 @@ import {
   Package,
   Shield,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services | AVI Industriel",
+  description:
+    "Full-spectrum CNC diagnostics and repair services: geometry alignment, electrical troubleshooting, preventive maintenance, pre-purchase inspection, and more.",
+};
 import CrosshairIllustration from "@/components/illustrations/Crosshair";
 import CircuitBoard from "@/components/illustrations/CircuitBoard";
 import type { LucideIcon } from "lucide-react";
@@ -43,7 +50,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-4 max-w-xl text-lg text-steel-light">
               Full-spectrum CNC diagnostics and repair. From emergency
-              breakdowns to scheduled maintenance &mdash; we keep your machines
+              breakdowns to scheduled maintenance, we keep your machines
               running.
             </p>
           </ScrollReveal>
@@ -152,7 +159,7 @@ export default function ServicesPage() {
               Trusted across
             </p>
             <h2 className="mt-2 text-3xl font-bold text-machine-black md:text-4xl">
-              9 Major CNC Brands
+              15 Major CNC Brands
             </h2>
           </ScrollReveal>
 

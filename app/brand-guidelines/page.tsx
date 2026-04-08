@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Brand Guidelines | AVI Industriel",
+  description:
+    "AVI Industriel brand guidelines: positioning, voice, color palette, typography, logo usage, and content standards.",
+};
 
 const COLORS = [
   { name: "Signal Green", hex: "#2ECC52", usage: "CTAs, highlights, logo, active states", dark: false, bg: "bg-[#2ECC52]" },
@@ -34,7 +41,7 @@ export default function BrandGuidelines() {
             style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }}
           />
           <h1 className="text-4xl font-extrabold tracking-tight text-bright md:text-6xl">Brand Guidelines</h1>
-          <p className="mt-4 text-steel-light text-lg">AVI Industriel Inc. &mdash; Prepared by EMBI Studio, April 2026</p>
+          <p className="mt-4 text-steel-light text-lg">AVI Industriel Inc. | Prepared by EMBI Studio, April 2026</p>
         </div>
       </section>
 
@@ -46,7 +53,7 @@ export default function BrandGuidelines() {
             <h2 className="text-3xl font-bold tracking-tight text-machine-black mb-8">Brand Positioning</h2>
             <div className="bg-white border border-border-light rounded-lg p-8 mb-8">
               <p className="text-lg leading-relaxed text-machine-black italic">
-                &ldquo;For manufacturers in Greater Montreal whose CNC machines are down, AVI Industriel is the independent electromechanical specialist who diagnoses and fixes the problem fast &mdash; because 20 years across 9 major brands means Alexandre has already seen your exact issue before.&rdquo;
+                &ldquo;For manufacturers in Greater Montreal whose CNC machines are down, AVI Industriel is the independent electromechanical specialist who diagnoses and fixes the problem fast, because 20 years across 15 major brands means Alexandre has already seen your exact issue before.&rdquo;
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -76,7 +83,7 @@ export default function BrandGuidelines() {
               { title: "Honesty", desc: "We tell you exactly what's wrong, what it costs, and how long it takes. If you don't need the repair, we'll say so. We'd rather lose a job than lose trust." },
               { title: "Independence", desc: "Not tied to any manufacturer. We recommend what's right for the machine, not what we sell. No parts upsell. No brand bias. No contract lock-in." },
               { title: "Urgency", desc: "Production stopped means money lost. We understand the pressure. Same-day response in Greater Montreal. No voicemail chains. No ticket systems. One call." },
-              { title: "Clarity", desc: "No jargon dumping. No 40-page reports when a sentence will do. We explain what happened, why, and what to do next — in language anyone on the floor can understand." },
+              { title: "Clarity", desc: "No jargon dumping. No 40-page reports when a sentence will do. We explain what happened, why, and what to do next, in language anyone on the floor can understand." },
             ].map((v, i) => (
               <ScrollReveal key={v.title} delay={i * 60}>
                 <div className="bg-white border border-border-light rounded-lg p-6 flex gap-4">
@@ -98,7 +105,7 @@ export default function BrandGuidelines() {
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.15em] text-dust mb-2">03</p>
             <h2 className="text-3xl font-bold tracking-tight text-machine-black mb-4">Brand Voice &amp; Tone</h2>
-            <p className="text-shop-grey text-base mb-10">AVI sounds like a senior technician briefing a plant manager. Calm, competent, direct. Not selling &mdash; diagnosing.</p>
+            <p className="text-shop-grey text-base mb-10">AVI sounds like a senior technician briefing a plant manager. Calm, competent, direct. Not selling. Diagnosing.</p>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
@@ -167,18 +174,18 @@ export default function BrandGuidelines() {
           <ScrollReveal delay={100}>
             <div className="space-y-8">
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Headings — Inter ExtraBold / Bold</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Headings: Inter ExtraBold / Bold</p>
                 <p className="text-5xl font-extrabold tracking-[-0.03em] text-machine-black">Hero Headline</p>
                 <p className="text-3xl font-bold tracking-tight text-machine-black mt-4">Section Heading</p>
                 <p className="text-lg font-semibold text-machine-black mt-4">Card Title</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Body — Inter Regular / Medium</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Body: Inter Regular / Medium</p>
                 <p className="text-base text-shop-grey leading-relaxed">Body text at 16px. Used for paragraphs, descriptions, and content. Line-height 1.6 for comfortable reading.</p>
                 <p className="text-sm text-shop-grey leading-relaxed mt-4">Small body at 14px. Used for captions, secondary info, and supporting text.</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-8">
-                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Technical — JetBrains Mono</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-dust mb-4">Technical: JetBrains Mono</p>
                 <p className="font-mono text-2xl font-bold text-signal">Makino · Mazak · Fanuc</p>
                 <p className="font-mono text-base text-shop-grey mt-4">(514) 971-1284</p>
                 <p className="font-mono text-xs text-dust mt-4 uppercase tracking-[0.1em]">Section Label</p>
@@ -262,7 +269,7 @@ export default function BrandGuidelines() {
           <ScrollReveal delay={200}>
             <h3 className="font-semibold text-machine-black mb-4">Secondary Headlines</h3>
             <div className="grid md:grid-cols-2 gap-3 mb-10">
-              {["20 years. 9 brands. One call.", "Full-spectrum CNC service.", "The machine doesn't care what brand it is. Neither do we.", "Trusted across critical sectors.", "Why AVI.", "Diagnostic. Repair. Running."].map((h) => (
+              {["20 years. 15 brands. One call.", "Full-spectrum CNC service.", "The machine doesn't care what brand it is. Neither do we.", "Trusted across critical sectors.", "Why AVI.", "Diagnostic. Repair. Running."].map((h) => (
                 <div key={h} className="bg-white border border-border-light rounded-lg p-4">
                   <p className="text-sm font-semibold text-machine-black">{h}</p>
                 </div>
@@ -275,7 +282,7 @@ export default function BrandGuidelines() {
             <div className="space-y-4">
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">15 seconds</span>
-                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&ldquo;AVI Industriel — independent CNC diagnostics and repair in Montreal. 20 years, 9 major brands, same-day response. Your machine is down, we get it running.&rdquo;</p>
+                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&ldquo;AVI Industriel: independent CNC diagnostics and repair in Montreal. 20 years, 15 major brands, same-day response. Your machine is down, we get it running.&rdquo;</p>
               </div>
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">30 seconds</span>
@@ -283,7 +290,7 @@ export default function BrandGuidelines() {
               </div>
               <div className="bg-white border border-border-light rounded-lg p-6">
                 <span className="font-mono text-xs text-signal">60 seconds</span>
-                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&ldquo;When a CNC machine goes down, production bleeds money. Most manufacturers wait days for an OEM technician who only services one brand. AVI Industriel is different. Alexandre Vachon is a certified electro-mechanic with 20 years of experience across 9 major CNC platforms. He&rsquo;s independent — no parts to sell, no brand loyalty, no contract lock-in. Just honest diagnosis and fast repair. Same-day response in Greater Montreal, ready to travel beyond. From emergency breakdowns to preventive maintenance, pre-purchase inspections to safety audits — if it&rsquo;s CNC, he&rsquo;s already seen your exact problem. Call (514) 971-1284.&rdquo;</p>
+                <p className="text-sm text-shop-grey mt-2 leading-relaxed">&ldquo;When a CNC machine goes down, production bleeds money. Most manufacturers wait days for an OEM technician who only services one brand. AVI Industriel is different. Alexandre Vachon is a certified electro-mechanic with 20 years of experience across 15 major CNC platforms. He&rsquo;s independent: no parts to sell, no brand loyalty, no contract lock-in. Just honest diagnosis and fast repair. Same-day response in Greater Montreal, ready to travel beyond. From emergency breakdowns to preventive maintenance, pre-purchase inspections to safety audits: if it&rsquo;s CNC, he&rsquo;s already seen your exact problem. Call (514) 971-1284.&rdquo;</p>
               </div>
             </div>
           </ScrollReveal>
@@ -303,7 +310,7 @@ export default function BrandGuidelines() {
             <div className="grid md:grid-cols-2 gap-3 mb-8">
               <div className="bg-signal/5 border border-signal/20 rounded-lg p-4">
                 <span className="text-[10px] uppercase tracking-[0.15em] text-signal font-semibold block mb-2">Good</span>
-                <p className="text-sm text-machine-black">&ldquo;Axis drift after a crash? We realign geometry across all major platforms — Makino, Mazak, Haas — and get you back to tolerance.&rdquo;</p>
+                <p className="text-sm text-machine-black">&ldquo;Axis drift after a crash? We realign geometry across all major platforms (Makino, Mazak, Haas) and get you back to tolerance.&rdquo;</p>
               </div>
               <div className="bg-red-50 border border-red-200/30 rounded-lg p-4">
                 <span className="text-[10px] uppercase tracking-[0.15em] text-red-400 font-semibold block mb-2">Bad</span>
@@ -354,8 +361,8 @@ export default function BrandGuidelines() {
             <div className="space-y-2 text-sm text-shop-grey">
               <p>&bull; Maximum 2 hashtags per post. Many posts need zero.</p>
               <p>&bull; No emojis in professional posts. One max if tone warrants it.</p>
-              <p>&bull; First person — &ldquo;I&rdquo; not &ldquo;we&rdquo; or &ldquo;the team.&rdquo;</p>
-              <p>&bull; French posts are fine — Montreal is bilingual.</p>
+              <p>&bull; First person: &ldquo;I&rdquo; not &ldquo;we&rdquo; or &ldquo;the team.&rdquo;</p>
+              <p>&bull; French posts are fine. Montreal is bilingual.</p>
               <p>&bull; Write like texting a colleague, not writing an ad.</p>
             </div>
           </ScrollReveal>
@@ -365,7 +372,7 @@ export default function BrandGuidelines() {
       {/* Footer */}
       <section className="bg-graphite py-12">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-steel-light/40 text-xs">Prepared by EMBI Studio &mdash; <a href="https://embi-studio.com" className="text-signal/50 hover:text-signal transition-colors">embi-studio.com</a></p>
+          <p className="text-steel-light/40 text-xs">Prepared by EMBI Studio | <a href="https://embi-studio.com" className="text-signal/50 hover:text-signal transition-colors">embi-studio.com</a></p>
         </div>
       </section>
     </main>

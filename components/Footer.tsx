@@ -14,7 +14,7 @@ const NAV_LINKS_EN = [
 const NAV_LINKS_FR = [
   { label: "Accueil", href: "/fr" },
   { label: "Services", href: "/fr/services" },
-  { label: "A propos", href: "/fr/about" },
+  { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
 ];
 
@@ -40,12 +40,12 @@ export default function Footer() {
             />
             <p className="mt-4 max-w-xs font-heading text-sm leading-relaxed text-dust">
               {isFr
-                ? "Diagnostic et reparation CNC independants. 20 ans d'experience sur 9 marques majeures."
-                : "Independent CNC diagnostics and repair. 20 years of experience across 9 major brands."}
+                ? "Diagnostic et réparation CNC indépendants. 20 ans d'expérience sur 15 marques majeures."
+                : "Independent CNC diagnostics and repair. 20 years of experience across 15 major brands."}
             </p>
             <p className="mt-6 font-heading text-sm text-dust">
               {isFr
-                ? "Base dans le Grand Montreal. Pret a voyager."
+                ? "Basé dans le Grand Montréal. Prêt à voyager."
                 : "Based in Greater Montreal. Ready to travel."}
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-border-dark pt-8">
           <p className="font-heading text-xs text-dust">
             {isFr
-              ? "\u00A9 2026 AVI Industriel Inc. Tous droits reserves."
+              ? "\u00A9 2026 AVI Industriel Inc. Tous droits réservés."
               : "\u00A9 2026 AVI Industriel Inc. All rights reserved."}
           </p>
         </div>

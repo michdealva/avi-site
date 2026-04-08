@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import { PHONE, PHONE_LINK, EMAIL, UI_FR } from "@/data/content-fr";
 import QuoteFormFR from "./QuoteForm";
+
+export const metadata: Metadata = {
+  title: "Contact | AVI Industriel",
+  description:
+    "Appelez le (514) 971-1284 pour un diagnostic CNC le même jour dans le Grand Montréal, ou demandez une soumission en ligne.",
+};
 
 export default function ContactPageFR() {
   return (

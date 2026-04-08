@@ -15,7 +15,7 @@ const NAV_LINKS_EN = [
 const NAV_LINKS_FR = [
   { label: "Accueil", href: "/fr" },
   { label: "Services", href: "/fr/services" },
-  { label: "A propos", href: "/fr/about" },
+  { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
 ];
 

@@ -38,7 +38,7 @@ export const SERVICES: Service[] = [
     id: "diagnostics",
     title: "Diagnostics & Repair",
     description:
-      "Rapid fault diagnosis, alarm code resolution, and CNC repair. We identify root causes \u2014 not just symptoms.",
+      "Rapid fault diagnosis, alarm code resolution, and CNC repair. We identify root causes - not just symptoms.",
     scenarios:
       "Machine alarms, axis errors, unexpected faults, post-crash diagnostics",
     icon: "wrench",
@@ -65,7 +65,7 @@ export const SERVICES: Service[] = [
     id: "mechanical",
     title: "Mechanical, Pneumatic & Hydraulic",
     description:
-      "Complete mechanical systems service \u2014 from ballscrews and bearings to hydraulic units and pneumatic actuators.",
+      "Complete mechanical systems service - from ballscrews and bearings to hydraulic units and pneumatic actuators.",
     scenarios:
       "Hydraulic leaks, pneumatic pressure loss, bearing noise, ballscrew backlash",
     icon: "cog",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
     id: "inspection",
     title: "Pre-Purchase Inspection",
     description:
-      "Independent machine assessment before you buy. Geometry, electrical, mechanical \u2014 full report.",
+      "Independent machine assessment before you buy. Geometry, electrical, mechanical - full report.",
     scenarios:
       "Used machine evaluation, auction purchases, relocation assessments",
     icon: "search",
