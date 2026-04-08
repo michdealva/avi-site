@@ -8,14 +8,14 @@ export interface Brand {
 }
 
 export const BRANDS: Brand[] = [
-  { name: "Makino", logo: "/brands/makino.svg" },
+  { name: "Makino", logo: "/brands/makino-logo.svg" },
   { name: "Mazak", logo: "/brands/mazak.svg" },
-  { name: "Cincinnati", logo: "/brands/CI+Logo+(white).webp" },
+  { name: "Cincinnati", logo: "/brands/cincinnati-logo.svg" },
   { name: "Haas", logo: "/brands/haas-wordmark.svg" },
-  { name: "TOS", logo: "/brands/tos.svg" },
+  { name: "TOS", logo: "/brands/tos-logo.svg" },
   { name: "Emmegi", logo: "/brands/emmegi.png" },
   { name: "Fanuc", logo: "/brands/Fanuc_logo.svg" },
-  { name: "Siemens", logo: "/brands/siemens.png" },
+  { name: "Siemens", logo: "/brands/siemens.svg" },
   { name: "Hurco", logo: "/brands/Hurco.webp" },
   { name: "DMG Mori", logo: "/brands/dmg-mori.png" },
   { name: "Okuma", logo: "/brands/okuma-wordmark.svg" },
