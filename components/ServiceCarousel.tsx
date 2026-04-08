@@ -112,24 +112,27 @@ export default function ServiceCarousel({
         {services.map((service) => {
           const Icon = iconMap[service.icon];
           return (
-            <Link
-              key={service.id}
-              href={`${linkPrefix}/services#${service.id}`}
-              className="group flex-shrink-0 w-[280px] md:w-[320px] rounded-lg border border-border-light bg-white p-6 hover:border-signal transition-all duration-300 hover:scale-110 hover:rotate-[-2deg] hover:z-10 origin-center"
-            >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
-                {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
-              </div>
-              <h3 className="text-base font-semibold text-machine-black">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-shop-grey line-clamp-3">
-                {service.description}
-              </p>
-              <span className="mt-3 inline-block text-sm font-medium text-signal transition-colors group-hover:text-signal-dark">
-                {learnMore} &rarr;
-              </span>
-            </Link>
+            <div key={service.id} className="group/card relative flex-shrink-0 w-[280px] md:w-[320px] transition-all duration-300 hover:scale-110 hover:rotate-[-2deg] hover:z-10 origin-center">
+              {/* Glow behind card */}
+              <div className="absolute -inset-2 rounded-2xl bg-signal/0 blur-[20px] transition-all duration-500 group-hover/card:bg-signal/15" />
+              <Link
+                href={`${linkPrefix}/services#${service.id}`}
+                className="relative block rounded-lg border border-border-light bg-white p-6 hover:border-signal transition-colors duration-300"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                  {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
+                </div>
+                <h3 className="text-base font-semibold text-machine-black">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-shop-grey line-clamp-3">
+                  {service.description}
+                </p>
+                <span className="mt-3 inline-block text-sm font-medium text-signal transition-colors group-hover/card:text-signal-dark">
+                  {learnMore} &rarr;
+                </span>
+              </Link>
+            </div>
           );
         })}
       </div>
