@@ -217,23 +217,14 @@ export default function HomeFR() {
         </div>
       </section>
 
-      {/* -- Social Proof -- */}
-      <section className="bg-concrete py-16">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="font-mono text-4xl font-bold text-signal">50+</p>
-          <p className="mt-2 text-lg font-semibold text-machine-black">ateliers de fabrication font confiance à AVI</p>
-          <p className="mt-1 text-sm text-dust">Grand Montréal et au-delà</p>
-        </div>
-      </section>
-
-      {/* -- Industries -- */}
+      {/* -- Industries + Social Proof (merged) -- */}
       <section className="bg-concrete py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-xl font-bold uppercase tracking-[0.02em] text-machine-black md:text-2xl">
-            {UI_FR.industries.heading}
-          </h2>
+          <p className="font-mono text-6xl font-bold text-signal md:text-7xl">50+</p>
+          <p className="mt-3 text-xl font-bold text-machine-black md:text-2xl">Ateliers de fabrication font confiance à AVI</p>
+          <p className="mt-2 text-sm text-dust">Grand Montréal et au-delà</p>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
               { icon: Plane, label: "Aérospatiale" },
               { icon: Car, label: "Automobile" },
@@ -243,15 +234,15 @@ export default function HomeFR() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="rounded-lg border border-border-light bg-white px-6 py-5 text-center hover:border-signal transition-colors last:col-span-2 md:last:col-span-1"
+                className="rounded-lg border border-border-light bg-white px-6 py-6 text-center hover:border-signal transition-colors last:col-span-2 md:last:col-span-1"
               >
-                <item.icon className="h-6 w-6 text-signal mx-auto mb-2" strokeWidth={2} />
+                <item.icon className="h-7 w-7 text-signal mx-auto mb-3" strokeWidth={1.5} />
                 <p className="text-sm font-semibold text-machine-black">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <p className="mx-auto mt-10 max-w-lg text-base italic text-shop-grey">
+          <p className="mx-auto mt-12 max-w-lg text-base italic text-shop-grey">
             &laquo;&nbsp;{UI_FR.industries.quote}&nbsp;&raquo;
           </p>
         </div>

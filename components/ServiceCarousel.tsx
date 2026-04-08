@@ -97,16 +97,16 @@ export default function ServiceCarousel({
 
       {/* Edge fades */}
       {canScrollLeft && (
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-workshop to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-workshop to-transparent" />
       )}
       {canScrollRight && (
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-workshop to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-workshop to-transparent" />
       )}
 
       {/* Scrollable track */}
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto overflow-y-visible scrollbar-hide py-8 -my-8 px-2"
+        className="flex gap-5 overflow-x-auto scrollbar-hide py-12 -my-12 px-4"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {services.map((service) => {
