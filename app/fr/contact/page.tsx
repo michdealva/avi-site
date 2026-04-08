@@ -42,6 +42,10 @@ export default function ContactPageFR() {
             </h2>
           </ScrollReveal>
 
+          <p className="text-sm text-shop-grey mb-4">
+            Vous préférez appeler? <a href="tel:+15149711284" className="text-signal font-semibold hover:text-signal-dark transition-colors">(514) 971-1284</a>
+          </p>
+
           <ScrollReveal delay={100}>
             <QuoteFormFR />
           </ScrollReveal>

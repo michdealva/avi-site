@@ -19,6 +19,9 @@ import {
   Clock,
   ShieldCheck,
   MessageSquare,
+  Plane,
+  Car,
+  Droplets,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -57,6 +60,8 @@ export default function Home() {
       <section className="relative flex min-h-[85vh] items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
         <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none pulse-subtle" />
 
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(46,204,82,0.06)_0%,transparent_70%)] pointer-events-none" />
+
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-16 md:py-20 text-center">
           {/* AVI Logo */}
           <motion.div
@@ -83,7 +88,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl font-extrabold leading-[1.05] tracking-[-0.03em] text-bright md:text-7xl"
+            className="text-5xl font-black leading-[1.05] tracking-[-0.04em] text-bright md:text-7xl"
           >
             Your CNC is down.
             <br />
@@ -108,18 +113,20 @@ export default function Home() {
           >
             <a
               href={PHONE_LINK}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-signal px-8 py-4 font-semibold text-white transition-colors hover:bg-signal-dark"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-signal px-10 py-5 text-lg font-bold text-white transition-colors hover:bg-signal-dark"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-5 w-5" />
               Call {PHONE}
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-bright px-8 py-4 font-semibold text-bright transition-colors hover:bg-white/5"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-bright px-6 py-3 text-sm font-medium text-bright transition-colors hover:bg-white/5"
             >
               Request a Quote
             </Link>
           </motion.div>
+
+          <p className="mt-4 text-sm text-steel-light/80">Same-day response in Greater Montreal</p>
 
           {/* Stat counters */}
           <motion.div
@@ -181,7 +188,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Services Snapshot ── (Remy push #3: green left border on cards) */}
+      {/* ── Section Divider ── */}
+      <div className="flex justify-center py-6 bg-workshop">
+        <div className="h-0.5 w-16 bg-signal rounded-full" />
+      </div>
+
+      {/* ── Services Snapshot ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
         <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.22] pointer-events-none float-slow" />
 
@@ -190,38 +202,68 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.1em] text-dust">
               Services
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
+            <h2 className="mt-2 text-xl font-bold uppercase tracking-[0.02em] text-machine-black md:text-2xl">
               Full-spectrum CNC service
             </h2>
           </ScrollReveal>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {SERVICES.slice(0, 4).map((service, i) => (
-              <ScrollReveal key={service.id} delay={i * 80}>
-                <Link
-                  href={`/services#${service.id}`}
-                  className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
-                >
-                  {(() => {
-                    const Icon = SERVICE_ICON_MAP[service.icon];
-                    return (
-                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
-                        {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
-                      </div>
-                    );
-                  })()}
-                  <h3 className="text-lg font-semibold text-machine-black">
-                    {service.title}
+          <div className="mt-12 space-y-6">
+            {/* Featured first service */}
+            <ScrollReveal>
+              <Link
+                href={`/services#${SERVICES[0].id}`}
+                className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 md:flex md:gap-8 md:items-start hover:border-signal transition-colors duration-300"
+              >
+                {(() => {
+                  const Icon = SERVICE_ICON_MAP[SERVICES[0].icon];
+                  return (
+                    <div className="mb-4 md:mb-0 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-signal/10">
+                      {Icon && <Icon className="h-6 w-6 text-signal" strokeWidth={2} />}
+                    </div>
+                  );
+                })()}
+                <div>
+                  <h3 className="text-xl font-bold text-machine-black">
+                    {SERVICES[0].title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-shop-grey">
-                    {service.description}
+                    {SERVICES[0].description}
                   </p>
                   <span className="mt-4 inline-block text-sm font-medium text-signal transition-colors group-hover:text-signal-dark">
                     Learn more &rarr;
                   </span>
-                </Link>
-              </ScrollReveal>
-            ))}
+                </div>
+              </Link>
+            </ScrollReveal>
+            {/* Remaining 3 services */}
+            <div className="grid gap-6 md:grid-cols-3">
+              {SERVICES.slice(1, 4).map((service, i) => (
+                <ScrollReveal key={service.id} delay={(i + 1) * 80}>
+                  <Link
+                    href={`/services#${service.id}`}
+                    className="group block rounded-lg border-l-4 border-l-signal border border-border-light bg-white p-8 hover:border-signal transition-colors duration-300"
+                  >
+                    {(() => {
+                      const Icon = SERVICE_ICON_MAP[service.icon];
+                      return (
+                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-signal/10">
+                          {Icon && <Icon className="h-5 w-5 text-signal" strokeWidth={2} />}
+                        </div>
+                      );
+                    })()}
+                    <h3 className="text-lg font-semibold text-machine-black">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-shop-grey">
+                      {service.description}
+                    </p>
+                    <span className="mt-4 inline-block text-sm font-medium text-signal transition-colors group-hover:text-signal-dark">
+                      Learn more &rarr;
+                    </span>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
 
           <ScrollReveal delay={400}>
@@ -237,23 +279,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Industries ── (Remy push #4: tighter heading) */}
+      {/* ── Social Proof ── */}
+      <section className="bg-concrete py-16">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="font-mono text-4xl font-bold text-signal">50+</p>
+          <p className="mt-2 text-lg font-semibold text-machine-black">Manufacturing shops trust AVI</p>
+          <p className="mt-1 text-sm text-dust">Greater Montreal and beyond</p>
+        </div>
+      </section>
+
+      {/* ── Industries ── */}
       <section className="bg-concrete py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-machine-black md:text-4xl">
+          <h2 className="text-xl font-bold uppercase tracking-[0.02em] text-machine-black md:text-2xl">
             Trusted across critical sectors
           </h2>
 
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
-            {INDUSTRIES.map((industry, i) => (
-              <span key={industry} className="flex items-center gap-4">
-                <span className="text-xl font-semibold text-machine-black md:text-2xl">
-                  {industry}
-                </span>
-                {i < INDUSTRIES.length - 1 && (
-                  <span className="text-xl text-signal">&middot;</span>
-                )}
-              </span>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
+            {[
+              { icon: Plane, label: "Aerospace" },
+              { icon: Car, label: "Automotive" },
+              { icon: Package, label: "Consumer Goods" },
+              { icon: Droplets, label: "Plastics" },
+              { icon: Shield, label: "Defense & Military" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-lg border border-border-light bg-white px-6 py-5 text-center hover:border-signal transition-colors last:col-span-2 md:last:col-span-1"
+              >
+                <item.icon className="h-6 w-6 text-signal mx-auto mb-2" strokeWidth={2} />
+                <p className="text-sm font-semibold text-machine-black">{item.label}</p>
+              </div>
             ))}
           </div>
 
@@ -270,7 +326,7 @@ export default function Home() {
         <CrosshairIllustration className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-20 pointer-events-none float-slow float-delay-2" />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold tracking-tight text-bright md:text-4xl">
+            <h2 className="text-xl font-bold uppercase tracking-[0.02em] text-bright md:text-2xl">
               Why AVI
             </h2>
           </ScrollReveal>
