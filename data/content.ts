@@ -8,21 +8,21 @@ export interface Brand {
 }
 
 export const BRANDS: Brand[] = [
-  { name: "Makino", logo: "/brands/makino.png" },
-  { name: "Mazak", logo: "/brands/mazak.png" },
-  { name: "Cincinnati", logo: "/brands/cincinnati.png" },
-  { name: "Haas", logo: "/brands/haas.png" },
+  { name: "Makino", logo: "/brands/makino.svg" },
+  { name: "Mazak", logo: "/brands/mazak.svg" },
+  { name: "Cincinnati", logo: "/brands/CI+Logo+(white).webp" },
+  { name: "Haas", logo: "/brands/Haas-Symbol.png" },
   { name: "TOS", logo: "/brands/tos.svg" },
   { name: "Emmegi", logo: "/brands/emmegi.png" },
-  { name: "Fanuc", logo: "/brands/fanuc.png" },
+  { name: "Fanuc", logo: "/brands/Fanuc_logo.svg" },
   { name: "Siemens", logo: "/brands/siemens.png" },
-  { name: "Hurco", logo: "/brands/hurco.png" },
+  { name: "Hurco", logo: "/brands/Hurco.webp" },
   { name: "DMG Mori", logo: "/brands/dmg-mori.png" },
   { name: "Okuma", logo: "/brands/okuma.png" },
-  { name: "Hankook", logo: "/brands/hankook.svg" },
+  { name: "Hankook", logo: "/brands/Hankook-logo-5500x1000.png" },
   { name: "Doosan", logo: "/brands/doosan.png" },
   { name: "Hardinge", logo: "/brands/hardinge.png" },
-  { name: "Matsuura", logo: "/brands/matsuura.png" },
+  { name: "Matsuura", logo: "/brands/matsuura.svg" },
 ];
 
 export type Service = {
