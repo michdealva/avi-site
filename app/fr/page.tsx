@@ -186,7 +186,6 @@ export default function HomeFR() {
 
       {/* -- Services Snapshot -- */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <img src="/icons/cnc-machine.svg" alt="" className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.10] pointer-events-none float-slow" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
