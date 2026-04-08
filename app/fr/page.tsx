@@ -169,7 +169,8 @@ export default function HomeFR() {
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="h-8 max-w-[130px] object-contain invert brightness-0 invert md:h-10 md:max-w-[150px]"
+                  className="h-8 max-w-[130px] object-contain md:h-10 md:max-w-[150px]"
+                      style={{ filter: "brightness(0) invert(1)" }}
                   width={110}
                   height={24}
                   loading="lazy"
