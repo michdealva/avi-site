@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
-import GearSystem from "@/components/illustrations/GearSystem";
+// Iconscout illustration
 
 const PHILOSOPHY_ICON_MAP: Record<string, LucideIcon> = {
   Honesty: Eye,
@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       {/* ── Alexandre's Story ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <GearSystem className="absolute -right-10 top-10 w-[300px] opacity-[0.1] pointer-events-none float float-delay-2" />
+        <img src="/icons/gear.svg" alt="" className="absolute -right-10 top-10 w-[300px] opacity-[0.08] pointer-events-none float float-delay-2" />
         <div className="relative mx-auto max-w-4xl px-6">
           <ScrollReveal>
             <blockquote className="border-l-4 border-signal pl-6 md:pl-8">

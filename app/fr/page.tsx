@@ -3,10 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
-import Blueprint from "@/components/illustrations/Blueprint";
-import CNCMachine from "@/components/illustrations/CNCMachine";
-import GearSystem from "@/components/illustrations/GearSystem";
-import CrosshairIllustration from "@/components/illustrations/Crosshair";
+// Iconscout illustrations used as <img> tags with CSS filters
 import {
   Wrench,
   Crosshair,
@@ -59,7 +56,7 @@ export default function HomeFR() {
     <main>
       {/* -- Hero -- */}
       <section className="relative flex min-h-[85vh] items-center justify-center bg-graphite grid-texture pt-16 overflow-hidden">
-        <Blueprint className="absolute inset-0 w-full h-full opacity-100 pointer-events-none pulse-subtle" />
+        <img src="/icons/blueprint.svg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] pointer-events-none pulse-subtle" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(46,204,82,0.06)_0%,transparent_70%)] pointer-events-none" />
 
@@ -183,7 +180,7 @@ export default function HomeFR() {
 
       {/* -- Services Snapshot -- */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <CNCMachine className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.22] pointer-events-none float-slow" />
+        <img src="/icons/cnc-machine.svg" alt="" className="absolute -right-10 top-1/2 -translate-y-1/2 w-[300px] md:w-[400px] opacity-[0.10] pointer-events-none float-slow" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
@@ -309,8 +306,8 @@ export default function HomeFR() {
 
       {/* -- Why AVI -- */}
       <section className="relative bg-graphite grid-texture py-24 overflow-hidden">
-        <GearSystem className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.2] pointer-events-none float float-delay-1" />
-        <CrosshairIllustration className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-20 pointer-events-none float-slow float-delay-2" />
+        <img src="/icons/gear.svg" alt="" className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.18] pointer-events-none float float-delay-1" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
+        <img src="/icons/crosshair.svg" alt="" className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-[0.15] pointer-events-none float-slow float-delay-2" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
             <h2 className="text-xl font-bold uppercase tracking-[0.02em] text-bright md:text-2xl">

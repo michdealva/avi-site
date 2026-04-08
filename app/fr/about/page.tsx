@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTABand from "@/components/CTABand";
-import GearSystem from "@/components/illustrations/GearSystem";
+// Iconscout illustration
 import { UI_FR } from "@/data/content-fr";
 
 const PHILOSOPHY_ICON_MAP: Record<string, LucideIcon> = {
@@ -36,7 +36,7 @@ export default function AboutPageFR() {
 
       {/* -- Alexandre's Story -- */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <GearSystem className="absolute -right-10 top-10 w-[300px] opacity-[0.1] pointer-events-none float float-delay-2" />
+        <img src="/icons/gear.svg" alt="" className="absolute -right-10 top-10 w-[300px] opacity-[0.08] pointer-events-none float float-delay-2" />
         <div className="relative mx-auto max-w-4xl px-6">
           <ScrollReveal>
             <p className="text-xs uppercase tracking-[0.1em] text-dust mb-4">
