@@ -50,7 +50,7 @@ export default function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-graphite/95 backdrop-blur-md border-b border-border-dark"
-          : "bg-transparent"
+          : "bg-graphite md:bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
@@ -101,7 +101,7 @@ export default function Header() {
           </a>
 
           {/* Language toggle */}
-          <div className="hidden items-center gap-1 font-heading text-xs font-medium md:flex">
+          <div className="flex items-center gap-1 font-heading text-xs font-medium">
             <Link
               href={enHref}
               className={isFr ? "text-white/40 hover:text-white/70 transition-colors" : "text-white font-bold"}
