@@ -39,7 +39,6 @@ export default function AboutPage() {
 
       {/* ── Alexandre's Story ── */}
       <section className="relative bg-workshop py-24 overflow-hidden">
-        <img src="/icons/gear.svg" alt="" className="absolute -right-10 top-10 w-[300px] opacity-[0.08] pointer-events-none float float-delay-2" />
         <div className="relative mx-auto max-w-4xl px-6">
           <ScrollReveal>
             <blockquote className="border-l-4 border-signal pl-6 md:pl-8">

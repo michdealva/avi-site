@@ -250,8 +250,6 @@ export default function HomeFR() {
 
       {/* -- Why AVI -- */}
       <section className="relative bg-graphite grid-texture py-24 overflow-hidden">
-        <img src="/icons/gear.svg" alt="" className="absolute -left-10 bottom-0 w-[250px] md:w-[350px] opacity-[0.18] pointer-events-none float float-delay-1" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
-        <img src="/icons/crosshair.svg" alt="" className="absolute right-10 top-10 w-[150px] md:w-[200px] opacity-[0.15] pointer-events-none float-slow float-delay-2" style={{ filter: "brightness(0) saturate(100%) invert(69%) sepia(52%) saturate(5765%) hue-rotate(108deg) brightness(95%) contrast(84%)" }} />
         <div className="relative mx-auto max-w-6xl px-6">
           <ScrollReveal>
             <h2 className="text-xl font-bold uppercase tracking-[0.02em] text-bright md:text-2xl">
