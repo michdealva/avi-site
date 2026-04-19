@@ -11,8 +11,10 @@ export default function SiteChrome({
 }) {
   const pathname = usePathname();
   const isStudio = pathname?.startsWith("/studio");
+  const isDashboard = pathname?.startsWith("/dashboard");
+  const isLogin = pathname === "/login";
 
-  if (isStudio) {
+  if (isStudio || isDashboard || isLogin) {
     return <>{children}</>;
   }
 
