@@ -8,6 +8,7 @@ import { PHONE, PHONE_LINK } from "@/data/content";
 const NAV_LINKS_EN = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Inventory", href: "/inventory" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -15,6 +16,7 @@ const NAV_LINKS_EN = [
 const NAV_LINKS_FR = [
   { label: "Accueil", href: "/fr" },
   { label: "Services", href: "/fr/services" },
+  { label: "Inventaire", href: "/inventory" },
   { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
 ];
