@@ -2,6 +2,25 @@ export const PHONE = "(514) 971-1284";
 export const PHONE_LINK = "tel:+15149711284";
 export const EMAIL = "avitechnoservices@gmail.com";
 
+export const FOUNDED_YEAR = 2004;
+export const NEQ = "1178404100";
+
+export const ADDRESS = {
+  street: "1624 Rue du Champagne",
+  locality: "Saint-Lazare",
+  region: "QC",
+  postalCode: "J7T 2C1",
+  country: "CA",
+} as const;
+
+export const ADDRESS_LINE = `${ADDRESS.street}, ${ADDRESS.locality}, ${ADDRESS.region} ${ADDRESS.postalCode}`;
+
+export const SERVICE_AREA = {
+  regions: ["Quebec", "Ontario"],
+  radiusKm: 700,
+  hub: "Saint-Lazare, west of Montreal",
+} as const;
+
 export interface Brand {
   name: string;
   logo: string;
@@ -25,6 +44,15 @@ export const BRANDS: Brand[] = [
   { name: "Matsuura", logo: "/brands/matsuura.svg" },
 ];
 
+export const TOOLING_BRANDS: string[] = [
+  "Alberti",
+  "Eppinger",
+  "WTO",
+  "MT Marchetti",
+  "Evermore",
+  "Hold Well",
+];
+
 export type Service = {
   id: string;
   title: string;
@@ -34,6 +62,15 @@ export type Service = {
 };
 
 export const SERVICES: Service[] = [
+  {
+    id: "live-tooling-repair",
+    title: "Live Tooling Repair",
+    description:
+      "Specialist repair and rebuild of driven tools and live tooling units. Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well.",
+    scenarios:
+      "Bearing failure, gear noise, coolant leaks, runout issues, broken drive shafts",
+    icon: "cog",
+  },
   {
     id: "diagnostics",
     title: "Diagnostics & Repair",
@@ -134,27 +171,27 @@ export type Differentiator = {
 
 export const DIFFERENTIATORS: Differentiator[] = [
   {
-    title: "20 Years",
-    subtitle: "Experience",
+    title: "22 Years",
+    subtitle: "Field experience",
     description:
-      "Two decades diagnosing and repairing CNC machines across aerospace, automotive, and defense.",
+      "Hands-on experience since 2004 across aerospace, automotive, defense, and live tooling specialists.",
+  },
+  {
+    title: "Live Tooling",
+    subtitle: "Specialist",
+    description:
+      "Driven tool repair and rebuild on Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well.",
+  },
+  {
+    title: "Quebec + Ontario",
+    subtitle: "On-site service",
+    description:
+      "Mobile workshop based in Saint-Lazare. We travel up to 700km \u2014 same-day for greater Montreal.",
   },
   {
     title: "Independent",
     subtitle: "No brand bias",
     description:
       "Not tied to any manufacturer. We recommend what\u2019s right, not what we sell.",
-  },
-  {
-    title: "Same-Day",
-    subtitle: "Response",
-    description:
-      "Machine down? We understand urgency. Same-day response in Greater Montreal.",
-  },
-  {
-    title: "Honest",
-    subtitle: "Diagnosis",
-    description:
-      "Clear communication, fair pricing, no unnecessary work. We tell you exactly what\u2019s wrong.",
   },
 ];

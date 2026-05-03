@@ -16,7 +16,6 @@ import {
   Shield,
   Clock,
   ShieldCheck,
-  MessageSquare,
   Plane,
   Car,
   Droplets,
@@ -45,10 +44,10 @@ const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
 };
 
 const DIFF_ICON_MAP: Record<string, LucideIcon> = {
-  "20 Years": Clock,
+  "22 Years": Clock,
+  "Live Tooling": Settings,
+  "Quebec + Ontario": Zap,
   Independent: ShieldCheck,
-  "Same-Day": Zap,
-  Honest: MessageSquare,
 };
 
 export default function Home() {
@@ -103,10 +102,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto mt-6 max-w-xl text-xl text-steel-light"
+            className="mx-auto mt-6 max-w-2xl text-xl text-steel-light"
           >
-            Independent electromechanical diagnostics and repair. 20&nbsp;years.
-            15&nbsp;brands. Montreal.
+            Independent CNC repair and live tooling specialist. 22&nbsp;years
+            of field experience. Quebec & Ontario, on&#8209;site.
           </motion.p>
 
           <motion.div
@@ -130,7 +129,7 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <p className="mt-4 text-sm text-steel-light/80">Same-day response in Greater Montreal</p>
+          <p className="mt-4 text-sm text-steel-light/80">Same-day response in greater Montreal · On-site across Quebec & Ontario</p>
 
           {/* Stat counters */}
           <motion.div
@@ -140,8 +139,8 @@ export default function Home() {
             className="mt-16 flex items-center justify-center gap-8 sm:gap-16"
           >
             {[
-              { value: "20+", label: "Years" },
-              { value: "15", label: "Brands" },
+              { value: "22+", label: "Years" },
+              { value: "21", label: "Brands" },
               { value: "5", label: "Industries" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -219,7 +218,7 @@ export default function Home() {
           {/* Big stat */}
           <p className="font-mono text-6xl font-bold text-signal md:text-7xl">50+</p>
           <p className="mt-3 text-xl font-bold text-machine-black md:text-2xl">Manufacturing shops trust AVI</p>
-          <p className="mt-2 text-sm text-dust">Greater Montreal and beyond</p>
+          <p className="mt-2 text-sm text-dust">Across Quebec & Ontario · 22 years of field experience</p>
 
           {/* Industry cards */}
           <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-4">

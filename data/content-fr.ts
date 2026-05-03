@@ -1,8 +1,28 @@
 import type { Service, Differentiator } from "./content";
 
-export { PHONE, PHONE_LINK, EMAIL, BRANDS } from "./content";
+export {
+  PHONE,
+  PHONE_LINK,
+  EMAIL,
+  BRANDS,
+  TOOLING_BRANDS,
+  ADDRESS,
+  ADDRESS_LINE,
+  FOUNDED_YEAR,
+  NEQ,
+  SERVICE_AREA,
+} from "./content";
 
 export const SERVICES_FR: Service[] = [
+  {
+    id: "live-tooling-repair",
+    title: "Réparation d'outillage motorisé",
+    description:
+      "Spécialiste de la réparation et du remontage d'outils motorisés et d'unités d'outillage live. Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well.",
+    scenarios:
+      "Roulements défaillants, bruit d'engrenages, fuites de coolant, faux-rond, arbre d'entraînement brisé",
+    icon: "cog",
+  },
   {
     id: "diagnostics",
     title: "Diagnostic et réparation",
@@ -97,10 +117,22 @@ export const COMMON_ISSUES_FR = [
 
 export const DIFFERENTIATORS_FR: Differentiator[] = [
   {
-    title: "20 ans",
-    subtitle: "D'expérience",
+    title: "22 ans",
+    subtitle: "D'expérience terrain",
     description:
-      "Deux décennies à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense.",
+      "Expérience pratique depuis 2004 en aérospatiale, automobile, défense et outillage motorisé.",
+  },
+  {
+    title: "Outillage motorisé",
+    subtitle: "Spécialiste",
+    description:
+      "Réparation et remontage d'outils motorisés Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well.",
+  },
+  {
+    title: "Québec + Ontario",
+    subtitle: "Service sur place",
+    description:
+      "Atelier mobile basé à Saint-Lazare. On se déplace jusqu'à 700 km — même jour pour le Grand Montréal.",
   },
   {
     title: "Indépendant",
@@ -108,25 +140,13 @@ export const DIFFERENTIATORS_FR: Differentiator[] = [
     description:
       "Pas affilié à aucun fabricant. On recommande ce qui est bon pour la machine, pas ce qu'on vend.",
   },
-  {
-    title: "Même jour",
-    subtitle: "Réponse rapide",
-    description:
-      "Machine en panne? On comprend l'urgence. Réponse le même jour dans le Grand Montréal.",
-  },
-  {
-    title: "Honnête",
-    subtitle: "Diagnostic clair",
-    description:
-      "Communication franche, prix justes, pas de travail inutile. On vous dit exactement ce qui se passe.",
-  },
 ];
 
 export const UI_FR = {
   hero: {
     headline1: "Votre CNC est en panne.",
     headline2: "On la remet en marche.",
-    subtitle: "Diagnostic et réparation électromécanique indépendant. 20 ans. 15 marques. Montréal.",
+    subtitle: "Réparation CNC et spécialiste d'outillage motorisé. 22 ans d'expérience terrain. Québec et Ontario, sur place.",
     callBtn: "Appeler",
     quoteBtn: "Demander une soumission",
     years: "Ans",

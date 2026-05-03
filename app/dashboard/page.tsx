@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { client } from "@/sanity/client";
+import { freshClient as client } from "@/sanity/client";
 import DeleteMachineButton from "./DeleteMachineButton";
 
 export const dynamic = "force-dynamic";

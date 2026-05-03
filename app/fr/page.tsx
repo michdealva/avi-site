@@ -16,7 +16,6 @@ import {
   Shield,
   Clock,
   ShieldCheck,
-  MessageSquare,
   Plane,
   Car,
   Droplets,
@@ -46,10 +45,10 @@ const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
 };
 
 const DIFF_ICON_MAP: Record<string, LucideIcon> = {
-  "20 ans": Clock,
+  "22 ans": Clock,
+  "Outillage motorisé": Settings,
+  "Québec + Ontario": Zap,
   "Indépendant": ShieldCheck,
-  "Même jour": Zap,
-  "Honnête": MessageSquare,
 };
 
 export default function HomeFR() {
@@ -129,7 +128,7 @@ export default function HomeFR() {
             </Link>
           </motion.div>
 
-          <p className="mt-4 text-sm text-steel-light/80">Réponse le même jour dans le Grand Montréal</p>
+          <p className="mt-4 text-sm text-steel-light/80">Réponse le même jour dans le Grand Montréal · Service sur place au Québec et en Ontario</p>
 
           {/* Stat counters */}
           <motion.div
@@ -139,8 +138,8 @@ export default function HomeFR() {
             className="mt-16 flex items-center justify-center gap-8 sm:gap-16"
           >
             {[
-              { value: "20+", label: UI_FR.hero.years },
-              { value: "15", label: UI_FR.hero.brands },
+              { value: "22+", label: UI_FR.hero.years },
+              { value: "21", label: UI_FR.hero.brands },
               { value: "5", label: UI_FR.hero.industries },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -222,7 +221,7 @@ export default function HomeFR() {
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="font-mono text-6xl font-bold text-signal md:text-7xl">50+</p>
           <p className="mt-3 text-xl font-bold text-machine-black md:text-2xl">Ateliers de fabrication font confiance à AVI</p>
-          <p className="mt-2 text-sm text-dust">Grand Montréal et au-delà</p>
+          <p className="mt-2 text-sm text-dust">Au Québec et en Ontario · 22 ans d'expérience terrain</p>
 
           <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-4">
             {[

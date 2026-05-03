@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/getSession";
 import { writeClient } from "@/sanity/writeClient";
-import { client } from "@/sanity/client";
+import { freshClient as client } from "@/sanity/client";
 import {
   buildMachineBody,
   type MachinePayload,

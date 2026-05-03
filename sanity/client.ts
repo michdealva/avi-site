@@ -11,6 +11,15 @@ export const client = projectId
     })
   : null;
 
+export const freshClient = projectId
+  ? createClient({
+      projectId,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+      apiVersion: "2026-04-01",
+      useCdn: false,
+    })
+  : null;
+
 // GROQ queries for the machine catalog
 export const MACHINES_QUERY = `*[_type == "machine" && status != "sold"] | order(_createdAt desc) {
   _id,
