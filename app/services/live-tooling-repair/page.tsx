@@ -25,8 +25,8 @@ const faqs = [
     a: "Most rebuilds take 3 to 7 working days once the unit is on our bench. We diagnose, replace bearings and seals, recheck runout, test under load, and document the work. Rush turnaround is available for urgent production issues.",
   },
   {
-    q: "Do you come on-site or do I ship the tooling?",
-    a: "Both. For shops in greater Montreal we come on-site to remove and reinstall the unit. For shops further away in Quebec or Ontario, ship the unit to our Saint-Lazare workshop and we ship it back rebuilt and tested. Our service radius is 700 km.",
+    q: "Do you travel on-site for live tooling repairs?",
+    a: "Yes — we travel up to 700 km from our Saint-Lazare base across Quebec and Ontario, with same-day response in greater Montreal. We come to your shop, remove the unit, rebuild it, and reinstall it. For remote jobs that involve moving equipment, call us at (514) 971-1284 and we'll arrange the best logistics for your situation.",
   },
   {
     q: "How much does a live tooling repair cost?",
