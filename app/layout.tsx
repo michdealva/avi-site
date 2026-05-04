@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteChrome from "@/components/SiteChrome";
 import {
   ADDRESS,
@@ -9,6 +10,8 @@ import {
   SERVICE_AREA,
 } from "@/data/content";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-25NQHL61CY";
 
 const inter = Inter({
   variable: "--font-heading",
@@ -140,6 +143,7 @@ export default function RootLayout({
       <body>
         <SiteChrome>{children}</SiteChrome>
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
