@@ -13,8 +13,11 @@ import {
 export const metadata: Metadata = {
   title: "Services de r\u00e9paration CNC | AVI Industriel",
   description:
-    "Diagnostic et r\u00e9paration CNC de A \u00e0 Z : g\u00e9om\u00e9trie, d\u00e9pannage \u00e9lectrique, maintenance pr\u00e9ventive, inspection pr\u00e9-achat. 15 marques, Grand Montr\u00e9al.",
-  alternates: { canonical: "https://aviindustriel.com/fr/services" },
+    "Diagnostic et r\u00e9paration CNC de A \u00e0 Z : g\u00e9om\u00e9trie, d\u00e9pannage \u00e9lectrique, maintenance pr\u00e9ventive, inspection pr\u00e9-achat. 15 marques, Qu\u00e9bec et Ontario.",
+  alternates: {
+    canonical: "https://avi-industriel.com/fr/services",
+    languages: { "en-CA": "https://avi-industriel.com/services", "fr-CA": "https://avi-industriel.com/fr/services", "x-default": "https://avi-industriel.com/services" },
+  },
 };
 // Iconscout illustrations
 import type { LucideIcon } from "lucide-react";

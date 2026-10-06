@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Contactez-nous | AVI Industriel",
   description:
     "Appelez le (514) 971-1284 pour un diagnostic CNC le m\u00eame jour dans le Grand Montr\u00e9al, ou demandez une soumission en ligne. R\u00e9ponse en 2 heures.",
-  alternates: { canonical: "https://aviindustriel.com/fr/contact" },
+  alternates: {
+    canonical: "https://avi-industriel.com/fr/contact",
+    languages: { "en-CA": "https://avi-industriel.com/contact", "fr-CA": "https://avi-industriel.com/fr/contact", "x-default": "https://avi-industriel.com/contact" },
+  },
 };
 
 export default function ContactPageFR() {

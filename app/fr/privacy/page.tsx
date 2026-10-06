@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Politique de confidentialit\u00e9 | AVI Industriel",
   description:
     "Politique de confidentialit\u00e9 d\u2019AVI Industriel. D\u00e9couvrez comment nous traitons les donn\u00e9es collect\u00e9es via notre formulaire de soumission. Aucun cookie, aucun suivi.",
-  alternates: { canonical: "https://aviindustriel.com/fr/privacy" },
+  alternates: {
+    canonical: "https://avi-industriel.com/fr/privacy",
+    languages: { "en-CA": "https://avi-industriel.com/privacy", "fr-CA": "https://avi-industriel.com/fr/privacy", "x-default": "https://avi-industriel.com/privacy" },
+  },
 };
 
 export default function PrivacyPageFR() {

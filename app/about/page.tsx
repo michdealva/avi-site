@@ -4,8 +4,11 @@ import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "About | AVI Industriel",
   description:
-    "Meet Alexandre Vachon, certified electro-mechanic with 20 years of CNC diagnostics and repair experience across 15 major brands. Independent, honest, and fast.",
-  alternates: { canonical: "https://aviindustriel.com/about" },
+    "Meet Alexandre Vachon, certified electro-mechanic with 22 years of CNC diagnostics and repair experience across 15 major brands. Independent, honest, and fast.",
+  alternates: {
+    canonical: "https://avi-industriel.com/about",
+    languages: { "en-CA": "https://avi-industriel.com/about", "fr-CA": "https://avi-industriel.com/fr/about", "x-default": "https://avi-industriel.com/about" },
+  },
 };
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -31,7 +34,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-4 max-w-xl text-lg text-steel-light">
               Independent CNC diagnostics and repair, founded on honesty and
-              20&nbsp;years of hands-on experience.
+              22&nbsp;years of hands-on experience.
             </p>
           </ScrollReveal>
         </div>
@@ -63,7 +66,7 @@ export default function AboutPage() {
                   Founder &amp; Lead Technician
                 </p>
                 <p className="mt-0.5 text-xs text-dust">
-                  20 years experience
+                  22 years experience
                 </p>
               </div>
             </div>
@@ -161,7 +164,7 @@ export default function AboutPage() {
                   Certified Electro-Mechanic
                 </p>
                 <p className="text-sm text-shop-grey">
-                  Provincially certified with 20 years of field experience
+                  Provincially certified with 22 years of field experience
                 </p>
               </div>
             </div>
@@ -177,17 +180,17 @@ export default function AboutPage() {
               Coverage
             </p>
             <h2 className="mt-2 text-3xl font-bold text-machine-black md:text-4xl">
-              Based in Greater Montreal. Ready to travel.
+              Based in Saint-Lazare. On-site across Quebec and Ontario.
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-shop-grey">
-              Our home base is the Greater Montreal area, where we offer
-              same-day response for emergencies. We regularly service shops
-              across the South Shore, North Shore, Laval, and the Eastern
-              Townships. For specialized jobs, we travel throughout Quebec and
-              beyond, wherever the machine needs us.
+              Our home base is Saint-Lazare, west of Montreal. We offer
+              same-day response in Greater Montreal and regularly service
+              shops across the South Shore, North Shore, Laval, and the
+              Eastern Townships. We travel up to 700 km across Quebec and
+              Ontario, wherever the machine needs us.
             </p>
           </ScrollReveal>
         </div>

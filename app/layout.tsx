@@ -4,10 +4,14 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteChrome from "@/components/SiteChrome";
 import {
   ADDRESS,
+  BRANDS,
   EMAIL,
   FOUNDED_YEAR,
+  NEQ,
   PHONE,
   SERVICE_AREA,
+  SERVICES,
+  TOOLING_BRANDS,
 } from "@/data/content";
 import "./globals.css";
 
@@ -32,6 +36,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://avi-industriel.com"),
   alternates: {
     canonical: "https://avi-industriel.com",
+    languages: { "en-CA": "https://avi-industriel.com", "fr-CA": "https://avi-industriel.com/fr", "x-default": "https://avi-industriel.com" },
   },
   openGraph: {
     title: "AVI Industriel Inc. | CNC Repair & Live Tooling Specialist",
@@ -50,79 +55,108 @@ export const metadata: Metadata = {
   },
 };
 
-const localBusinessSchema = {
+const BUSINESS_DESCRIPTION =
+  "Independent CNC repair and live tooling specialist serving Quebec and Ontario. 22 years of field experience across 15+ machine brands and 6 tooling brands (Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well).";
+
+const siteSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://avi-industriel.com/#business",
-  name: "AVI Industriel Inc.",
-  alternateName: "AVI Industriel",
-  url: "https://avi-industriel.com",
-  telephone: PHONE,
-  email: EMAIL,
-  foundingDate: String(FOUNDED_YEAR),
-  description:
-    "Independent CNC repair and live tooling specialist serving Quebec and Ontario. 22 years of field experience across 15+ machine brands and 6 tooling brands (Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well).",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: ADDRESS.street,
-    addressLocality: ADDRESS.locality,
-    addressRegion: ADDRESS.region,
-    postalCode: ADDRESS.postalCode,
-    addressCountry: ADDRESS.country,
-  },
-  areaServed: SERVICE_AREA.regions.map((r) => ({
-    "@type": "AdministrativeArea",
-    name: r,
-  })),
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://avi-industriel.com/#business",
+      name: "AVI Industriel Inc.",
+      alternateName: "AVI Industriel",
+      url: "https://avi-industriel.com",
+      logo: "https://avi-industriel.com/avi-logo.svg",
+      telephone: PHONE,
+      email: EMAIL,
+      foundingDate: String(FOUNDED_YEAR),
+      founder: { "@id": "https://avi-industriel.com/#founder" },
+      description: BUSINESS_DESCRIPTION,
+      // Mobile service: the base is residential, so only the town is published
       address: {
         "@type": "PostalAddress",
         addressLocality: ADDRESS.locality,
         addressRegion: ADDRESS.region,
         addressCountry: ADDRESS.country,
       },
+      areaServed: SERVICE_AREA.regions.map((r) => ({
+        "@type": "AdministrativeArea",
+        name: r,
+      })),
+      serviceArea: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: ADDRESS.locality,
+            addressRegion: ADDRESS.region,
+            addressCountry: ADDRESS.country,
+          },
+        },
+        geoRadius: SERVICE_AREA.radiusKm * 1000,
+      },
+      availableLanguage: ["English", "French"],
+      knowsAbout: [
+        "CNC repair",
+        "Live tooling repair",
+        "Driven tools rebuild",
+        "CNC geometry and alignment",
+        "Electrical troubleshooting",
+        "Preventive maintenance",
+        "Pre-purchase machine inspection",
+        ...TOOLING_BRANDS.map((b) => `${b} live tooling`),
+        ...BRANDS.map((b) => b.name),
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "CNC repair services",
+        itemListElement: SERVICES.map((s) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: s.title,
+            description: s.description,
+          },
+        })),
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "07:00",
+          closes: "19:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Saturday", "Sunday"],
+          description: "By appointment",
+        },
+      ],
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "NEQ",
+        value: NEQ,
+      },
     },
-    geoRadius: SERVICE_AREA.radiusKm * 1000,
-  },
-  knowsAbout: [
-    "CNC repair",
-    "Live tooling repair",
-    "Driven tools rebuild",
-    "CNC geometry and alignment",
-    "Electrical troubleshooting",
-    "Preventive maintenance",
-    "Pre-purchase machine inspection",
-    "Alberti live tooling",
-    "Eppinger driven tools",
-    "WTO tooling",
-    "MT Marchetti tooling",
-    "Fanuc",
-    "Siemens",
-    "Mazak",
-    "Haas",
-    "Makino",
-  ],
-  openingHoursSpecification: [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "19:00",
+      "@type": "Person",
+      "@id": "https://avi-industriel.com/#founder",
+      name: "Alexandre Vachon",
+      jobTitle: "CNC repair technician and live tooling specialist",
+      worksFor: { "@id": "https://avi-industriel.com/#business" },
+      url: "https://avi-industriel.com/about",
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      description: "By appointment",
+      "@type": "WebSite",
+      "@id": "https://avi-industriel.com/#website",
+      url: "https://avi-industriel.com",
+      name: "AVI Industriel Inc.",
+      publisher: { "@id": "https://avi-industriel.com/#business" },
+      inLanguage: ["en-CA", "fr-CA"],
     },
   ],
-  identifier: {
-    "@type": "PropertyValue",
-    propertyID: "NEQ",
-    value: "1178404100",
-  },
 };
 
 export default function RootLayout({
@@ -136,7 +170,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify(siteSchema),
           }}
         />
       </head>

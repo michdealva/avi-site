@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AVI Industriel — CNC Diagnostics & Repair, Greater Montreal";
+export const alt = "AVI Industriel — CNC Repair & Live Tooling, Quebec and Ontario";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

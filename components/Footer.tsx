@@ -7,6 +7,8 @@ import { PHONE, PHONE_LINK, EMAIL } from "@/data/content";
 const NAV_LINKS_EN = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Inventory", href: "/inventory" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy", href: "/privacy" },
@@ -15,6 +17,8 @@ const NAV_LINKS_EN = [
 const NAV_LINKS_FR = [
   { label: "Accueil", href: "/fr" },
   { label: "Services", href: "/fr/services" },
+  { label: "Inventaire", href: "/inventory" },
+  { label: "Blogue", href: "/blog" },
   { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
   { label: "Confidentialit\u00e9", href: "/fr/privacy" },
@@ -44,13 +48,13 @@ export default function Footer() {
             />
             <p className="mt-4 max-w-xs font-heading text-sm leading-relaxed text-dust">
               {isFr
-                ? "Diagnostic et réparation CNC indépendants. 20 ans d'expérience sur 15 marques majeures."
-                : "Independent CNC diagnostics and repair. 20 years of experience across 15 major brands."}
+                ? "Diagnostic et réparation CNC indépendants. 22 ans d'expérience sur 15 marques majeures."
+                : "Independent CNC diagnostics and repair. 22 years of experience across 15 major brands."}
             </p>
             <p className="mt-6 font-heading text-sm text-dust">
               {isFr
-                ? "Basé dans le Grand Montréal. Prêt à voyager."
-                : "Based in Greater Montreal. Ready to travel."}
+                ? "Basé à Saint-Lazare. Service sur place au Québec et en Ontario."
+                : "Based in Saint-Lazare. On-site service across Quebec and Ontario."}
             </p>
           </div>
 

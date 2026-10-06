@@ -1,0 +1,33 @@
+# AVI Industriel Inc.
+
+> Independent CNC machine repair and live tooling (driven tool) specialist based in Saint-Lazare, Quebec, Canada. On-site mobile service across Quebec and Ontario, up to 700 km from base, with same-day response in Greater Montreal. Founded in 2004 by Alexandre Vachon, who has 22 years of field experience. Not affiliated with any machine manufacturer.
+
+## Key facts
+
+- Legal name: AVI Industriel Inc. (Quebec enterprise number NEQ 1178404100)
+- Founded: 2004
+- Founder and lead technician: Alexandre Vachon
+- Phone: (514) 971-1284
+- Email: avitechnoservices@gmail.com
+- Service area: Quebec and Ontario, Canada. Mobile service, we travel to the customer's shop.
+- Hours: Monday to Friday, 7:00 to 19:00. Weekends by appointment.
+- Languages: English and French
+- Industries served: aerospace, automotive, consumer goods, plastics, defense
+
+## Services
+
+- [Live tooling repair](https://avi-industriel.com/services/live-tooling-repair): Repair and rebuild of driven tools and live tooling units for CNC lathes. Brands: Alberti, Eppinger, WTO, MT Marchetti, Evermore, Hold Well. Most rebuilds take 3 to 7 working days. A bearing rebuild on a standard driven tool typically runs $800 to $1,800 CAD; a full rebuild with new gears, shaft and seals can reach $3,000+ CAD. Firm quote after teardown.
+- [All CNC services](https://avi-industriel.com/services): Diagnostics and repair, alarm code resolution, CNC geometry and alignment (ballbar testing, geometric compensation), electrical troubleshooting (drives, servos, controls), mechanical, pneumatic and hydraulic repair, preventive maintenance, pre-purchase machine inspection, installation and setup, safety audits and CSA modifications.
+- [Used CNC machines for sale](https://avi-industriel.com/inventory): Inspected used lathes, mills and machining centers.
+
+## Machine and control brands serviced
+
+Makino, Mazak, Cincinnati, Haas, TOS, Emmegi, Fanuc, Siemens, Hurco, DMG Mori, Okuma, Hankook, Doosan, Hardinge, Matsuura.
+
+## Pages
+
+- [Home](https://avi-industriel.com)
+- [About Alexandre Vachon and AVI](https://avi-industriel.com/about)
+- [Contact and quote request](https://avi-industriel.com/contact)
+- [Accueil en français](https://avi-industriel.com/fr)
+- [Services en français](https://avi-industriel.com/fr/services)

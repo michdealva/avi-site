@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Contact | AVI Industriel",
   description:
     "Call (514) 971-1284 for same-day CNC diagnostics and repair in Greater Montreal, or request a quote online. We respond within 2 hours.",
-  alternates: { canonical: "https://aviindustriel.com/contact" },
+  alternates: {
+    canonical: "https://avi-industriel.com/contact",
+    languages: { "en-CA": "https://avi-industriel.com/contact", "fr-CA": "https://avi-industriel.com/fr/contact", "x-default": "https://avi-industriel.com/contact" },
+  },
 };
 
 export default function ContactPage() {
@@ -85,11 +88,11 @@ export default function ContactPage() {
               Service area
             </p>
             <h2 className="mt-2 text-2xl font-bold text-machine-black">
-              Greater Montreal &amp; beyond
+              Quebec &amp; Ontario
             </h2>
             <p className="mt-4 text-base text-shop-grey">
-              Same-day response in Greater Montreal. We also travel across
-              Quebec for specialized jobs.
+              Same-day response in Greater Montreal. We travel up to 700 km
+              across Quebec and Ontario.
             </p>
           </ScrollReveal>
         </div>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { client, MACHINE_BY_SLUG_QUERY } from "@/sanity/client";
@@ -27,6 +28,29 @@ interface Machine {
   inspectionAvailable: boolean;
   description: string;
   photos: string[];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  let machine: Machine | null = null;
+  if (client) {
+    try {
+      machine = await client.fetch(MACHINE_BY_SLUG_QUERY, { slug });
+    } catch {
+      // Sanity query failed
+    }
+  }
+  if (!machine) return { title: "Machine not found | AVI Industriel" };
+
+  return {
+    title: `${machine.title} | Used CNC for Sale | AVI Industriel`,
+    description: machine.description?.slice(0, 160),
+    alternates: { canonical: `https://avi-industriel.com/inventory/${slug}` },
+  };
 }
 
 export default async function MachinePage({

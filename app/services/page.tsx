@@ -14,7 +14,10 @@ export const metadata: Metadata = {
   title: "Services | AVI Industriel",
   description:
     "Full-spectrum CNC diagnostics and repair: geometry alignment, electrical troubleshooting, preventive maintenance, and pre-purchase inspection. 15 brands supported.",
-  alternates: { canonical: "https://aviindustriel.com/services" },
+  alternates: {
+    canonical: "https://avi-industriel.com/services",
+    languages: { "en-CA": "https://avi-industriel.com/services", "fr-CA": "https://avi-industriel.com/fr/services", "x-default": "https://avi-industriel.com/services" },
+  },
 };
 // Iconscout illustrations used as <img> tags
 import type { LucideIcon } from "lucide-react";

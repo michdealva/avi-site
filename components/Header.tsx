@@ -9,6 +9,7 @@ const NAV_LINKS_EN = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Inventory", href: "/inventory" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -17,6 +18,7 @@ const NAV_LINKS_FR = [
   { label: "Accueil", href: "/fr" },
   { label: "Services", href: "/fr/services" },
   { label: "Inventaire", href: "/inventory" },
+  { label: "Blogue", href: "/blog" },
   { label: "\u00C0 propos", href: "/fr/about" },
   { label: "Contact", href: "/fr/contact" },
 ];

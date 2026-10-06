@@ -7,7 +7,8 @@ import { Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Used CNC Machines for Sale | AVI Industriel",
   description:
-    "Browse our inventory of inspected used CNC machines. Lathes, mills, machining centers from Makino, Mazak, Haas, Fanuc, and more. Greater Montreal.",
+    "Browse our inventory of inspected used CNC machines. Lathes, mills, machining centers from Makino, Mazak, Haas, Fanuc, and more. Quebec and Ontario.",
+  alternates: { canonical: "https://avi-industriel.com/inventory" },
 };
 
 export const revalidate = 60; // Revalidate every 60 seconds

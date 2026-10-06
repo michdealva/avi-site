@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Privacy Policy | AVI Industriel",
   description:
     "AVI Industriel privacy policy. Learn how we handle data collected through our quote request form. No cookies, no tracking, no third-party sharing.",
-  alternates: { canonical: "https://aviindustriel.com/privacy" },
+  alternates: {
+    canonical: "https://avi-industriel.com/privacy",
+    languages: { "en-CA": "https://avi-industriel.com/privacy", "fr-CA": "https://avi-industriel.com/fr/privacy", "x-default": "https://avi-industriel.com/privacy" },
+  },
 };
 
 export default function PrivacyPage() {

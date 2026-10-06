@@ -181,9 +181,9 @@ export const UI_FR = {
   about: {
     pageTitle: "À propos d'AVI Industriel",
     storyLabel: "Notre histoire",
-    storyQuote: "Plus de 20 ans à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense. J'ai commencé sur le plancher d'usine et j'y suis resté, parce que c'est là que sont les vrais problèmes.",
+    storyQuote: "22 ans à diagnostiquer et réparer des machines CNC en aérospatiale, automobile et défense. J'ai commencé sur le plancher d'usine et j'y suis resté, parce que c'est là que sont les vrais problèmes.",
     storyName: "Alexandre Vachon",
-    storyTitle: "Électromécanicien certifié, 20 ans d'expérience",
+    storyTitle: "Électromécanicien certifié, 22 ans d'expérience",
     philosophyLabel: "Notre philosophie",
     philosophyItems: [
       { title: "Honnêteté", desc: "On vous dit exactement ce qui ne va pas, combien ça coûte, et combien de temps ça prend. Si la réparation est pas nécessaire, on vous le dit." },
@@ -193,10 +193,10 @@ export const UI_FR = {
     ],
     certLabel: "Certifications",
     certTitle: "Électromécanicien certifié",
-    certDesc: "Certification professionnelle en électromécanique avec plus de 20 ans d'expérience terrain sur 15 plateformes CNC majeures.",
+    certDesc: "Certification professionnelle en électromécanique avec 22 ans d'expérience terrain sur 15 plateformes CNC majeures.",
     areaLabel: "Zone de service",
-    areaTitle: "Basé dans le Grand Montréal. Prêt à se déplacer.",
-    areaDesc: "Service principal dans la région du Grand Montréal, disponible partout au Québec et au-delà pour des projets spéciaux.",
+    areaTitle: "Basé à Saint-Lazare. Sur place au Québec et en Ontario.",
+    areaDesc: "Basé à Saint-Lazare, à l'ouest de Montréal. Réponse le même jour dans le Grand Montréal. On se déplace jusqu'à 700 km au Québec et en Ontario.",
   },
   contact: {
     phoneHero: "Besoin d'aide maintenant?",
@@ -220,7 +220,7 @@ export const UI_FR = {
     formSuccess: "C'est reçu. On vous revient bientôt.",
     altContact: "Pas urgent? Écrivez-nous à",
     areaTitle: "Zone de service",
-    areaDesc: "Grand Montréal et partout au Québec. Prêt à se déplacer.",
+    areaDesc: "Réponse le même jour dans le Grand Montréal. On se déplace jusqu'à 700 km au Québec et en Ontario.",
   },
   nav: {
     home: "Accueil",
@@ -230,7 +230,7 @@ export const UI_FR = {
   },
   footer: {
     tagline: "Diagnostic. Réparation. En marche.",
-    based: "Basé dans le Grand Montréal. Prêt à se déplacer.",
+    based: "Basé à Saint-Lazare. Service sur place au Québec et en Ontario.",
     copyright: "2026 AVI Industriel Inc. Tous droits réservés.",
   },
 };

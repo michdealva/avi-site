@@ -4,8 +4,11 @@ import { Eye, MessageCircle, DollarSign, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "\u00c0 propos | AVI Industriel Inc.",
   description:
-    "Alexandre Vachon, \u00e9lectrom\u00e9canicien certifi\u00e9 avec 20 ans d\u2019exp\u00e9rience en diagnostic et r\u00e9paration CNC. 15 marques, Grand Montr\u00e9al. Ind\u00e9pendant et honn\u00eate.",
-  alternates: { canonical: "https://aviindustriel.com/fr/about" },
+    "Alexandre Vachon, \u00e9lectrom\u00e9canicien certifi\u00e9 avec 22 ans d\u2019exp\u00e9rience en diagnostic et r\u00e9paration CNC. 15 marques, Qu\u00e9bec et Ontario. Ind\u00e9pendant et honn\u00eate.",
+  alternates: {
+    canonical: "https://avi-industriel.com/fr/about",
+    languages: { "en-CA": "https://avi-industriel.com/about", "fr-CA": "https://avi-industriel.com/fr/about", "x-default": "https://avi-industriel.com/about" },
+  },
 };
 import type { LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
