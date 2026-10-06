@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { EMAIL } from "@/data/content";
 
 export async function POST(request: Request) {
   try {
@@ -32,14 +33,21 @@ export async function POST(request: Request) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
 
-      await resend.emails.send({
+      // Resend returns { error } instead of throwing, so check it explicitly
+      const { error } = await resend.emails.send({
         from: "AVI Website <notifications@embi-studio.com>",
-        to: "michelle@embi-studio.com",
+        to: process.env.QUOTE_TO_EMAIL || EMAIL,
+        bcc: "michelle@embi-studio.com",
+        replyTo: email,
         subject: `New Quote Request: ${company}`,
         html: htmlBody,
       });
+      if (error) throw new Error(`Resend: ${error.message}`);
+    } else if (process.env.VERCEL_ENV === "production") {
+      // Never tell a customer "sent" when nothing can be delivered
+      throw new Error("RESEND_API_KEY is not configured");
     } else {
-      // Console fallback when no Resend key
+      // Console fallback for local dev without a Resend key
       console.log("New quote request:", { name, company, email, phone, brand, urgency, description });
     }
 
